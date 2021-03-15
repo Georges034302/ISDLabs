@@ -1,0 +1,50 @@
+.title{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #c9c9c9;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: center;
+}
+
+.text{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffff00;        
+}
+
+.form_title{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    color:#1d2e5f;   
+    padding: 5px;
+}
+
+.table{
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: large;
+    color:#33ff66;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;   
+}
+.table th{
+    color: white;
+}
+.table thead{
+    background-color:#4CAF50;
+}
+.table td{
+    text-align: left;
+}
+
+input{
+    background-color:#1d2e5f;
+    color: #ffff00;
+    font-weight: bold;
+    font-size: 16px;
+}
+
