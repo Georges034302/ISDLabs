@@ -1,6 +1,6 @@
 <%-- 
-    Document   : welcome
-    Created on : 15/03/2021, 5:09:16 PM
+    Document   : index
+    Created on : 15/03/2021, 3:05:56 PM
     Author     : george
 --%>
 
@@ -9,9 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/layout.css">
+        <script type="text/javascript" src="js/index.js"></script>
         <title>Welcome Page</title>
     </head>
-    <body>
-        <h1>Form data should be posted here (week 5 workshop)</h1>
+    <body onload="startTime()">
+        <div id="bar">
+            ISD Demo
+            <span id="links"> <a href="profile.jsp">Profile</a> | <a href="logout.jsp">Logout</a></span>
+        </div>
+        
+        <div id="clock" class="footer">            
+        </div>
     </body>
 </html>
