@@ -10,14 +10,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/form.css">
         <script type="text/javascript" src="js/index.js"></script>
         <title>Welcome Page</title>
     </head>
     <body onload="startTime()">
         <div id="bar">ISD Demo
-            <span id="links"><a href="logout.jsp">Logout</a> | <a href="main.jsp">Main</a></span>
+            <span id="links"><a href="logout.jsp">Logout</a> | <a href="profile.jsp">Profile</a></span>
         </div>
+        <% 
+            String name = request.getParameter("name");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            String phone = request.getParameter("phone");
+            String gender = request.getParameter("gender");
+            String dob = request.getParameter("dob");
+        %>
         
+        <table class="table">
+            <% if(password != null && password.equals("welcome")){ %>
+                <tr><td>Name:</td><td><%= name %></td></tr>
+                <tr><td>Email:</td><td><%= email %></td></tr>
+                <tr><td>Password:</td><td><%= password %></td></tr>
+                <tr><td>Phone:</td><td><%= phone %></td></tr>
+                <tr><td>Gender:</td><td><%= gender %></td></tr>
+                <tr><td>Date of Birth:</td><td><%= dob %></td></tr>
+            <% }else{ %>
+                <tr><td>Sorry unknown user click <a href="index.jsp">here</a> to go back to home page</td></tr>
+            <%}%>            
+        </table>
         <div id="clock" class="footer">
             
         </div>

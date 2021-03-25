@@ -16,7 +16,7 @@
     <body onload="startTime()">
         <div id="bar">
             ISD Demo
-            <span id="links"> <a href="profile.jsp"> profile</a> | <a href="logout.jsp">Logout</a></span>
+            <span id="links"> <a href="profile.jsp"> Profile</a> | <a href="logout.jsp">Logout</a></span>
         </div>
         
         <div id="clock" class="footer">            
