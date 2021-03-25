@@ -1,7 +1,7 @@
 <%-- 
-    Document   : login
-    Created on : 15/03/2021, 3:55:11 PM
-    Author     : george
+    Document   : index
+    Created on : Mar 19, 2021, 10:24:22 AM
+    Author     : George
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,15 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Page</title>
         <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/form.css">
         <script type="text/javascript" src="js/index.js"></script>
+        <title>Login Page</title>
     </head>
     <body onload="startTime()">
-        <div id="bar">
-            Sign In
-            <span id="links"> <a href="register.jsp"> Register</a> | <a href="index.jsp">Home </a></span>
+        <div id="bar">Sign In
+            <span id="links"><a href="register.jsp">Register</a> | <a href="index.jsp">Home</a></span>
         </div>
         
         <div id="clock" class="footer">

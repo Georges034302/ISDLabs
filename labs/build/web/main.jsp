@@ -11,11 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
         <script type="text/javascript" src="js/index.js"></script>
-        <title>Home Page</title>
+        <title>Main Page</title>
     </head>
     <body onload="startTime()">
         <div id="bar">ISD Demo
-            <span id="links"><a href="login.jsp">Login</a> | <a href="register.jsp">Register</a></span>
+            <span id="links"><a href="logout.jsp">Logout</a></span>
         </div>
         
         <div id="clock" class="footer">

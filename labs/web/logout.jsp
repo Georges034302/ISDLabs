@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
-    Created on : 15/03/2021, 3:05:56 PM
-    Author     : george
+    Created on : Mar 19, 2021, 10:24:22 AM
+    Author     : George
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,12 +14,12 @@
         <title>Logout Page</title>
     </head>
     <body onload="startTime()">
-        <div id="bar">
-            ISD Demo
-            <span id="links"> <a href="index.jsp">Home</a> </span>
+        <div id="bar">ISD Demo
+            <span id="links"><a href="index.jsp">Home</a></span>
         </div>
         
-        <div id="clock" class="footer">            
+        <div id="clock" class="footer">
+            
         </div>
     </body>
 </html>
