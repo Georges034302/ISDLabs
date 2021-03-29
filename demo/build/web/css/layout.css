@@ -1,0 +1,58 @@
+/* 
+    Created on : Mar 19, 2021, 10:28:00 AM
+    Author     : George
+*/
+body{
+    background: url("feit.jpg")no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    letter-spacing: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bar{
+    position: fixed;
+    background-color: #134c5b;
+    padding: 10px 5px 6px 15px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    top: 0;
+    left:0;
+    right: 0;
+    opacity: 0.7;
+}
+
+#links{
+    font-size: 18px;
+    padding: 5px;
+    word-spacing: 2px;
+    float: right;    
+}
+
+a:link, a:visited{
+    color:#3ffb09;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;    
+}
+a:hover, a:active{
+    background-color: green;
+    color: white;
+}
+
+.footer{
+    position: fixed;
+    background-color: #134c5b;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 36px;
+    color: #afeb00;
+    padding: 3px;
+    text-align: center;
+    opacity: 0.7;
+}
+
