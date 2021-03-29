@@ -37,6 +37,10 @@
             <tr><td>Gender:</td><td><%= gender%></td></tr>
             <tr><td>Date of Birth:</td><td><%= dob%></td></tr>            
         </table>
+        <%
+            User user = new User(name,email,password,phone,gender,dob);
+            session.setAttribute("user", user);
+        %>
         <div id="clock" class="footer"></div>
     </body>
 </html>

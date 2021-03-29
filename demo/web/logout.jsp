@@ -17,6 +17,7 @@
         <div id="bar">ISD Demo
             <span id="links"><a href="index.jsp">Home</a></span>
         </div>
+        <%session.invalidate(); %>
         
         <div id="clock" class="footer">
             
