@@ -30,15 +30,6 @@ public class User  implements Serializable{
         this.dob = dob;
     }
 
-    public void updateInfo(String name, String email, String password, String phone, String gender, String dob){
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;        
-    }
-    
     public User() {
     }
 
