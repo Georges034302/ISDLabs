@@ -10,15 +10,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/profile.css">
         <script type="text/javascript" src="js/index.js"></script>
         <title>Profile Page</title>
     </head>
     <body onload="startTime()">
         <div id="bar">
-            ISD Demo
+            User Profile
             <span id="links"> <a href="account.jsp">Account</a> | <a href="logout.jsp">Logout </a></span>
         </div>
-        
+       
+        <table id="users">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
         <div id="clock" class="footer">            
         </div>
     </body>

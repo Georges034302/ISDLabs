@@ -10,15 +10,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/form.css">
         <script type="text/javascript" src="js/index.js"></script>
         <title>Account Page</title>
     </head>
     <body onload="startTime()">
         <div id="bar">
-            ISD Demo
+            Edit User
             <span id="links"> <a href="profile.jsp"> Profile</a> | <a href="logout.jsp">Logout</a></span>
         </div>
-        
+       
         <div id="clock" class="footer">            
         </div>
     </body>

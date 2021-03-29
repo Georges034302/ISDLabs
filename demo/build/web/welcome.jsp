@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="uts.isd.model.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +16,7 @@
         <title>Welcome Page</title>
     </head>
     <body onload="startTime()">
-        <div id="bar">ISD Demo
+        <div id="bar">Welcome!
             <span id="links"><a href="logout.jsp">Logout</a> | <a href="profile.jsp">Profile</a></span>
         </div>
         <%
@@ -37,6 +36,7 @@
             <tr><td>Gender:</td><td><%= gender%></td></tr>
             <tr><td>Date of Birth:</td><td><%= dob%></td></tr>            
         </table>
+        
         <div id="clock" class="footer"></div>
     </body>
 </html>
