@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.exbin.utils.guipopup">
+    <module_version install_time="1611465097124" last="true" origin="NetBeans Plugin Portal" specification_version="0.1.1">
+        <file crc="0" name=".lastModified"/>
+        <file crc="1770380180" name="config/Modules/org-exbin-utils-guipopup.xml"/>
+        <file crc="541077999" name="modules/ext/jsr305-3.0.2.jar"/>
+        <file crc="2889754150" name="modules/org-exbin-utils-guipopup.jar"/>
+    </module_version>
+</module>

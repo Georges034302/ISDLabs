@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.gluon.plugin.netbeans">
+    <module_version install_time="1611465098039" last="true" origin="NetBeans Plugin Portal" specification_version="2.8.2">
+        <file crc="0" name=".lastModified"/>
+        <file crc="1023492359" name="config/Modules/com-gluon-plugin-netbeans.xml"/>
+        <file crc="3332832210" name="modules/com-gluon-plugin-netbeans.jar"/>
+        <file crc="3914736929" name="modules/ext/controlsfx-8.40.12.jar"/>
+        <file crc="3165970182" name="modules/ext/freemarker-2.3.23.jar"/>
+        <file crc="1047775651" name="modules/ext/ide-plugin-templates-2.10.2.jar"/>
+        <file crc="2238533751" name="modules/ext/javax.json-1.0.4.jar"/>
+        <file crc="746405174" name="modules/ext/log4j-1.2-api-2.5.jar"/>
+        <file crc="2294860283" name="modules/ext/log4j-api-2.5.jar"/>
+        <file crc="3212309280" name="modules/ext/log4j-core-2.5.jar"/>
+    </module_version>
+</module>

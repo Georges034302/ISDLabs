@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.junichi11.netbeans.modules.nonewline.resolver">
+    <module_version install_time="1611465097064" last="true" origin="NetBeans Plugin Portal" specification_version="1.4.1">
+        <file crc="1365815578" name="config/Modules/com-junichi11-netbeans-modules-nonewline-resolver.xml"/>
+        <file crc="2602422634" name="modules/com-junichi11-netbeans-modules-nonewline-resolver.jar"/>
+    </module_version>
+</module>

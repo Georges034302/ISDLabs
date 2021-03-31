@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.github.philippefichet.sonarlint4netbeans/1">
+    <module_version install_time="1611465098454" last="true" origin="NetBeans Plugin Portal" specification_version="2.3.0">
+        <file crc="1946289000" name="config/Modules/com-github-philippefichet-sonarlint4netbeans.xml"/>
+        <file crc="2695124086" name="modules/com-github-philippefichet-sonarlint4netbeans.jar"/>
+        <file crc="2857669946" name="modules/ext/com.github.philippefichet.sonarlint4netbeans/com-google-code-gson/gson.jar"/>
+        <file crc="543447949" name="modules/ext/com.github.philippefichet.sonarlint4netbeans/net-bytebuddy/byte-buddy-agent.jar"/>
+        <file crc="406986038" name="modules/ext/com.github.philippefichet.sonarlint4netbeans/net-bytebuddy/byte-buddy.jar"/>
+        <file crc="1371600603" name="modules/ext/com.github.philippefichet.sonarlint4netbeans/org-sonarsource-sonarlint-core/sonarlint-client-api.jar"/>
+        <file crc="2369612865" name="modules/ext/com.github.philippefichet.sonarlint4netbeans/org-sonarsource-sonarlint-core/sonarlint-core.jar"/>
+        <file crc="1409778007" name="update_tracking/com-github-philippefichet-sonarlint4netbeans.xml"/>
+    </module_version>
+</module>

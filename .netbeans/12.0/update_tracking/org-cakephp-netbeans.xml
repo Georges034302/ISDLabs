@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.cakephp.netbeans">
+    <module_version install_time="1611465097264" last="true" origin="NetBeans Plugin Portal" specification_version="1.0.0">
+        <file crc="1815377934" name="config/Modules/org-cakephp-netbeans.xml"/>
+        <file crc="2049217282" name="modules/ext/README.txt"/>
+        <file crc="3605063022" name="modules/ext/gson-2.2.4-for-cakephp-netbeans.jar"/>
+        <file crc="3435812031" name="modules/org-cakephp-netbeans.jar"/>
+    </module_version>
+</module>

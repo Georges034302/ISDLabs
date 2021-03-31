@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="code_evaluator">
+        <attr name="WinSys-TCRef-Order" stringvalue="evaluatorPane"/>
+    </fileobject>
+    <fileobject name="commonpalette">
+        <attr name="WinSys-TCRef-Order" stringvalue="CommonPalette"/>
+    </fileobject>
+    <fileobject name="editor">
+        <attr name="WinSys-TCRef-Order" stringvalue="Welcome/CoverageReportTopComponent/JShellEditor/dbgInstances/MultiView-jsp#002EsouD0E678EFtext#002Ehistory#007C/MultiView-jsp#002Esou312C04E1xt#002Ehistory#007C_1/MultiView-jsp#002Esou312C04E2xt#002Ehistory#007C_2/MultiView-java#002Eso2D0988CFtext#002Ehistory#007C/MultiView-jsp#002Esou312C04E3xt#002Ehistory#007C_3/MultiView-jsp#002Esou312C04E4xt#002Ehistory#007C_4"/>
+    </fileobject>
+    <fileobject name="explorer">
+        <attr name="WinSys-TCRef-Order" stringvalue="projectTabLogical_tc/services/projectTab_tc/favorites/DashboardTopComponent/debuggingView"/>
+    </fileobject>
+    <fileobject name="navigator">
+        <attr name="WinSys-TCRef-Order" stringvalue="StatusManagementTopComponent/navigatorTC/PhpHierarchyTopComponent/DomTC/TruffleASTDebugView"/>
+    </fileobject>
+    <fileobject name="output">
+        <attr name="WinSys-TCRef-Order" stringvalue="NotificationCenterTopComponent/output/TerminalContainerTopComponent/TagMyCodeTopComponent/watchesView/localsView/resultsView/callstackView/breakpointsView/sources/sessionsView/threadsView/bookmarks/versioning_output/search-results/gsf-testrunner-results/refactoring-preview/find-usages/svnversioning/hgversioningTC/GitVersioning/GitRepositories/TaskListTopComponent/ReporterResultTopComponent/SonarLintAnalyzerActionTopComponent/JavadocTopComponent/classes/AnalysisResultTopComponent/eventsView/CallHierarchyTopComponent/profiler_pp/SonarRuleDetailsTopComponent/AnalyzerTopComponent"/>
+    </fileobject>
+    <fileobject name="properties">
+        <attr name="WinSys-TCRef-Order" stringvalue="CssStylesTC/properties/KnockoutTC/AnalyzeStackTopComponent/JavaHierarchyTopComponent/timers"/>
+    </fileobject>
+</attributes>

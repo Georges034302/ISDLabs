@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="io.github.hmvictor.nb.sonarlint">
+    <module_version install_time="1611465097507" last="true" origin="NetBeans Plugin Portal" specification_version="1.0">
+        <file crc="2752128759" name="config/Modules/io-github-hmvictor-nb-sonarlint.xml"/>
+        <file crc="964851370" name="modules/ext/io.github.hmvictor.nb-sonarlint/aopalliance/aopalliance.jar"/>
+        <file crc="3315777451" name="modules/ext/io.github.hmvictor.nb-sonarlint/com-google-guava/guava.jar"/>
+        <file crc="4152903203" name="modules/ext/io.github.hmvictor.nb-sonarlint/com-google-inject/guice-no_aop.jar"/>
+        <file crc="3068211720" name="modules/ext/io.github.hmvictor.nb-sonarlint/com-sun-xml-bind/jaxb-core.jar"/>
+        <file crc="2882802504" name="modules/ext/io.github.hmvictor.nb-sonarlint/com-sun-xml-bind/jaxb-impl.jar"/>
+        <file crc="1470762890" name="modules/ext/io.github.hmvictor.nb-sonarlint/javax-activation/activation.jar"/>
+        <file crc="2853900338" name="modules/ext/io.github.hmvictor.nb-sonarlint/javax-annotation/jsr250-api.jar"/>
+        <file crc="4129301897" name="modules/ext/io.github.hmvictor.nb-sonarlint/javax-enterprise/cdi-api.jar"/>
+        <file crc="3496745672" name="modules/ext/io.github.hmvictor.nb-sonarlint/javax-inject/javax.inject.jar"/>
+        <file crc="2390431175" name="modules/ext/io.github.hmvictor.nb-sonarlint/javax-xml-bind/jaxb-api.jar"/>
+        <file crc="1200174112" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-commons/commons-lang3.jar"/>
+        <file crc="1570705440" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-aether-provider.jar"/>
+        <file crc="3825347123" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-artifact.jar"/>
+        <file crc="1490949781" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-builder-support.jar"/>
+        <file crc="3271414854" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-core.jar"/>
+        <file crc="1527190694" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-model-builder.jar"/>
+        <file crc="738096622" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-model.jar"/>
+        <file crc="4245678200" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-plugin-api.jar"/>
+        <file crc="3415080769" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-repository-metadata.jar"/>
+        <file crc="3750079969" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-settings-builder.jar"/>
+        <file crc="2963265514" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-apache-maven/maven-settings.jar"/>
+        <file crc="494801453" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-codehaus-plexus/plexus-classworlds.jar"/>
+        <file crc="3970467728" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-codehaus-plexus/plexus-component-annotations.jar"/>
+        <file crc="2776516003" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-codehaus-plexus/plexus-interpolation.jar"/>
+        <file crc="3997893265" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-codehaus-plexus/plexus-utils.jar"/>
+        <file crc="2287570644" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-eclipse-aether/aether-api.jar"/>
+        <file crc="3254170438" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-eclipse-aether/aether-impl.jar"/>
+        <file crc="3692961535" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-eclipse-aether/aether-spi.jar"/>
+        <file crc="3584469064" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-eclipse-aether/aether-util.jar"/>
+        <file crc="2473026511" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-eclipse-sisu/org.eclipse.sisu.inject.jar"/>
+        <file crc="4206667559" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-eclipse-sisu/org.eclipse.sisu.plexus.jar"/>
+        <file crc="2700282398" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-sonarsource-sonarlint-core/sonarlint-client-api.jar"/>
+        <file crc="3365968495" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-sonarsource-sonarlint-core/sonarlint-core.jar"/>
+        <file crc="3170029256" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-sonatype-plexus/plexus-cipher.jar"/>
+        <file crc="1450402278" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-sonatype-plexus/plexus-sec-dispatcher.jar"/>
+        <file crc="2972848508" name="modules/ext/io.github.hmvictor.nb-sonarlint/org-swinglabs-swingx/swingx-all.jar"/>
+        <file crc="582070619" name="modules/io-github-hmvictor-nb-sonarlint.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.vagrant">
+    <module_version install_time="1611465098397" last="true" origin="NetBeans Plugin Portal" specification_version="1.4.0">
+        <file crc="1657776434" name="config/Modules/org-netbeans-modules-vagrant.xml"/>
+        <file crc="3605063022" name="modules/ext/gson-2.2.4-for-vagrant.jar"/>
+        <file crc="3615567018" name="modules/ext/jsoup-1.7.2-for-nb-vagrant-plugin.jar"/>
+        <file crc="623016145" name="modules/ext/jsoup-License"/>
+        <file crc="2781648845" name="modules/org-netbeans-modules-vagrant.jar"/>
+    </module_version>
+</module>

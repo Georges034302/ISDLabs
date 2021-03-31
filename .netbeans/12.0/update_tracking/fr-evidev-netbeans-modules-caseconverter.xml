@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="fr.evidev.netbeans.modules.caseconverter">
+    <module_version install_time="1611465097872" last="true" origin="NetBeans Plugin Portal" specification_version="0.2.3">
+        <file crc="3395272519" name="config/Modules/fr-evidev-netbeans-modules-caseconverter.xml"/>
+        <file crc="2440597751" name="modules/fr-evidev-netbeans-modules-caseconverter.jar"/>
+        <file crc="1041063522" name="update_tracking/fr-evidev-netbeans-modules-caseconverter.xml"/>
+    </module_version>
+</module>

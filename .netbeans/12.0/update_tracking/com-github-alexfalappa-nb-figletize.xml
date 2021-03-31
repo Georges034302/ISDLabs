@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.github.alexfalappa.nb.figletize">
+    <module_version install_time="1611465098428" last="true" origin="NetBeans Plugin Portal" specification_version="1.0">
+        <file crc="1384658753" name="config/Modules/com-github-alexfalappa-nb-figletize.xml"/>
+        <file crc="3996713236" name="modules/com-github-alexfalappa-nb-figletize.jar"/>
+        <file crc="1207807628" name="modules/ext/com.github.alexfalappa.nb-figletize/com-github-dtmo-jfiglet/jfiglet.jar"/>
+    </module_version>
+</module>

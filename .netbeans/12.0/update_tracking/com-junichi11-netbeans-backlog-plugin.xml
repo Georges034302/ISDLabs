@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.junichi11.netbeans.backlog.plugin">
+    <module_version install_time="1611465098622" last="true" origin="NetBeans Plugin Portal" specification_version="0.9.0">
+        <file crc="2257140700" name="config/Modules/com-junichi11-netbeans-backlog-plugin.xml"/>
+        <file crc="3553032328" name="modules/com-junichi11-netbeans-backlog-plugin.jar"/>
+        <file crc="4154544623" name="modules/ext/com.junichi11.netbeans.backlog.plugin/com-fasterxml-jackson-core/jackson-annotations.jar"/>
+        <file crc="2442136042" name="modules/ext/com.junichi11.netbeans.backlog.plugin/com-fasterxml-jackson-core/jackson-core.jar"/>
+        <file crc="3211486546" name="modules/ext/com.junichi11.netbeans.backlog.plugin/com-fasterxml-jackson-core/jackson-databind.jar"/>
+        <file crc="2281263350" name="modules/ext/com.junichi11.netbeans.backlog.plugin/com-nulab-inc/backlog4j.jar"/>
+        <file crc="3775162781" name="modules/ext/com.junichi11.netbeans.backlog.plugin/org-apache-commons/commons-lang3.jar"/>
+        <file crc="2487559454" name="modules/ext/com.junichi11.netbeans.backlog.plugin/org-netbeans-external/org-apache-commons-io.jar"/>
+        <file crc="4229455853" name="modules/ext/com.junichi11.netbeans.backlog.plugin/org-netbeans-external/swingx-0.9.5.jar"/>
+        <file crc="3167013995" name="update_tracking/com-junichi11-netbeans-backlog-plugin.xml"/>
+    </module_version>
+</module>

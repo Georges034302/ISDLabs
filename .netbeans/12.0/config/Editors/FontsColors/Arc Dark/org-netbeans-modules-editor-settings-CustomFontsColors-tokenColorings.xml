@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.2//EN" "http://netbeans.apache.org/dtds/EditorFontsColors-1_2.dtd">
+<fontscolors>
+    <fontcolor name="mark-occurrences"/>
+    <fontcolor foreColor="ffe6db74" name="markup-attribute"/>
+    <fontcolor name="private"/>
+    <fontcolor foreColor="green" name="string"/>
+    <fontcolor bgColor="red" name="deprecated" strikeThrough="darkGray"/>
+    <fontcolor name="error" underline="red"/>
+    <fontcolor name="interface"/>
+    <fontcolor foreColor="pink" name="entity-reference"/>
+    <fontcolor name="operator"/>
+    <fontcolor foreColor="ffae81ff" name="number"/>
+    <fontcolor bgColor="ff33353a" foreColor="fff8f8f0" name="default">
+        <font name="Consolas" size="24"/>
+    </fontcolor>
+    <fontcolor name="protected"/>
+    <fontcolor foreColor="ffff66ff" name="public"/>
+    <fontcolor foreColor="fffd971f" name="method-parameter">
+        <font style="italic"/>
+    </fontcolor>
+    <fontcolor name="warning"/>
+    <fontcolor foreColor="ffff66cc" name="keyword">
+        <font style="italic"/>
+    </fontcolor>
+    <fontcolor foreColor="ff2e3340" name="class"/>
+    <fontcolor name="local-variable"/>
+    <fontcolor foreColor="ff6699ff" name="identifier"/>
+    <fontcolor foreColor="ffae81ff" name="static"/>
+    <fontcolor foreColor="ffa6e22e" name="method"/>
+    <fontcolor name="constructor"/>
+    <fontcolor foreColor="orange" name="markup-element"/>
+    <fontcolor default="string" name="markup-attribute-value"/>
+    <fontcolor name="abstract"/>
+    <fontcolor name="separator"/>
+    <fontcolor name="enum"/>
+    <fontcolor name="url" underline="ff4e5d93"/>
+    <fontcolor name="field"/>
+    <fontcolor foreColor="ffae81ff" name="char"/>
+    <fontcolor foreColor="ff62625f" name="comment">
+        <font style="italic"/>
+    </fontcolor>
+    <fontcolor foreColor="gray" name="unused" waveUnderlined="pink"/>
+    <fontcolor name="whitespace"/>
+</fontscolors>

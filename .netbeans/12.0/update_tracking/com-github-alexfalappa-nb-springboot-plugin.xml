@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.github.alexfalappa.nb.springboot.plugin">
+    <module_version install_time="1611465097334" last="true" origin="NetBeans Plugin Portal" specification_version="3.1">
+        <file crc="1593349627" name="config/Modules/com-github-alexfalappa-nb-springboot-plugin.xml"/>
+        <file crc="848996583" name="modules/com-github-alexfalappa-nb-springboot-plugin.jar"/>
+        <file crc="4180555590" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/com-fasterxml-jackson-core/jackson-annotations.jar"/>
+        <file crc="2406191937" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/com-fasterxml-jackson-core/jackson-core.jar"/>
+        <file crc="896300513" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/com-fasterxml-jackson-core/jackson-databind.jar"/>
+        <file crc="1860364709" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/com-vaadin-external-google/android-json.jar"/>
+        <file crc="1049092013" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/commons-lang/commons-lang.jar"/>
+        <file crc="122887306" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-apache-commons/commons-collections4.jar"/>
+        <file crc="1741878717" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-ow2-asm/asm-analysis.jar"/>
+        <file crc="4190189899" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-ow2-asm/asm-tree.jar"/>
+        <file crc="3279035926" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-ow2-asm/asm-util.jar"/>
+        <file crc="2331029463" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-ow2-asm/asm.jar"/>
+        <file crc="3243544667" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-parboiled/parboiled-core.jar"/>
+        <file crc="385121623" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-parboiled/parboiled-java.jar"/>
+        <file crc="267810521" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework-boot/spring-boot-configuration-metadata.jar"/>
+        <file crc="3017837464" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-aop.jar"/>
+        <file crc="1263724814" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-beans.jar"/>
+        <file crc="2551784774" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-context.jar"/>
+        <file crc="1820714433" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-core.jar"/>
+        <file crc="2460627728" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-expression.jar"/>
+        <file crc="316365623" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-jcl.jar"/>
+        <file crc="3279873666" name="modules/ext/com.github.alexfalappa.nb-springboot-plugin/org-springframework/spring-web.jar"/>
+    </module_version>
+</module>

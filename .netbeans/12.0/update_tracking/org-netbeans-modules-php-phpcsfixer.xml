@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.php.phpcsfixer">
+    <module_version install_time="1611465097827" last="true" origin="NetBeans Plugin Portal" specification_version="0.11.0">
+        <file crc="2838027085" name="config/Modules/org-netbeans-modules-php-phpcsfixer.xml"/>
+        <file crc="4204804694" name="modules/org-netbeans-modules-php-phpcsfixer.jar"/>
+    </module_version>
+</module>

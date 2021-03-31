@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mode version="2.4">
+    <name unique="navigator"  />
+  <kind type="view" />
+  <state type="joined"  />
+  <constraints>
+    <path orientation="horizontal" number="20" weight="0.16265690376569036"/>
+    <path orientation="vertical" number="60" weight="0.3638344226579521"/>
+  </constraints>
+  <bounds x="192" y="447" width="672" height="468" />
+  <frame state="0"/>
+    <active-tc  id="StatusManagementTopComponent"  prev-id="StatusManagementTopComponent" />
+    <empty-behavior permanent="true"/>
+</mode>

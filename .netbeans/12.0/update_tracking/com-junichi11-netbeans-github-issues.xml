@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.junichi11.netbeans.github.issues">
+    <module_version install_time="1611465097159" last="true" origin="NetBeans Plugin Portal" specification_version="0.6.0">
+        <file crc="4134491668" name="config/Modules/com-junichi11-netbeans-github-issues.xml"/>
+        <file crc="3890328922" name="modules/com-junichi11-netbeans-github-issues.jar"/>
+        <file crc="3385096118" name="modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar"/>
+        <file crc="1944629646" name="modules/ext/com.junichi11.netbeans.github.issues/com-vladsch-flexmark/flexmark-ext-gfm-strikethrough.jar"/>
+        <file crc="133657173" name="modules/ext/com.junichi11.netbeans.github.issues/com-vladsch-flexmark/flexmark-ext-tables.jar"/>
+        <file crc="1936916697" name="modules/ext/com.junichi11.netbeans.github.issues/com-vladsch-flexmark/flexmark-formatter.jar"/>
+        <file crc="438050172" name="modules/ext/com.junichi11.netbeans.github.issues/com-vladsch-flexmark/flexmark-util.jar"/>
+        <file crc="1257905134" name="modules/ext/com.junichi11.netbeans.github.issues/com-vladsch-flexmark/flexmark.jar"/>
+        <file crc="501595065" name="modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar"/>
+        <file crc="4229455853" name="modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar"/>
+        <file crc="755097434" name="update_tracking/com-junichi11-netbeans-github-issues.xml"/>
+    </module_version>
+</module>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.raelity.logman.netbeans">
+    <module_version install_time="1611465097909" last="true" origin="NetBeans Plugin Portal" specification_version="2.2">
+        <file crc="2013228759" name="config/Modules/com-raelity-logman-netbeans.xml"/>
+        <file crc="3119802324" name="modules/com-raelity-logman-netbeans.jar"/>
+        <file crc="3015737886" name="modules/ext/com.raelity.logman.netbeans/com-mastfrog/simplevalidation-swing.jar"/>
+        <file crc="3334930092" name="modules/ext/com.raelity.logman.netbeans/com-mastfrog/simplevalidation.jar"/>
+        <file crc="810852257" name="modules/ext/com.raelity.logman.netbeans/com-raelity-logman/logman-core.jar"/>
+        <file crc="2211212312" name="modules/ext/com.raelity.logman.netbeans/com-raelity-logman/simple-val-fix.jar"/>
+    </module_version>
+</module>
