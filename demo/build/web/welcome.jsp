@@ -4,6 +4,7 @@
     Author     : George
 --%>
 
+<%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
     </head>
     <body onload="startTime()">
         <div id="bar">Welcome!
-            <span id="links"><a href="logout.jsp">Logout</a> | <a href="profile.jsp">Profile</a></span>
+            <span id="links"><a href="profile.jsp">Profile</a> | <a href="logout.jsp">Logout</a></span>
         </div>
         <%
             String name = request.getParameter("name");
@@ -36,7 +37,10 @@
             <tr><td>Gender:</td><td><%= gender%></td></tr>
             <tr><td>Date of Birth:</td><td><%= dob%></td></tr>            
         </table>
-        
+        <% 
+            User user = new User(name,email,password,phone,gender,dob);
+            session.setAttribute("user", user);
+         %>
         <div id="clock" class="footer"></div>
     </body>
 </html>

@@ -4,6 +4,7 @@
     Author     : george
 --%>
 
+<%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,7 +20,9 @@
             User Profile
             <span id="links"> <a href="account.jsp">Account</a> | <a href="logout.jsp">Logout </a></span>
         </div>
-       
+        <%
+            User user = (User)session.getAttribute("user");
+        %>
         <table id="users">
             <tr>
                 <th>Name</th>
@@ -30,12 +33,12 @@
                 <th>Date of Birth</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><%= user.getName() %></td>
+                <td>${user.email}</td>
+                <td>${user.password}</td>
+                <td>${user.phone}</td>
+                <td>${user.gender}</td>
+                <td>${user.dob}</td>
             </tr>
         </table>
 

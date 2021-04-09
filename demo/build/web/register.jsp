@@ -28,7 +28,7 @@
                 <tr><td><input class="button" type="submit" value="Sign Up"></td>
                     <td>
                         <select class="select" name="gender">
-                            <option value="empty">Gender</option>
+                            <option value="">Gender</option>
                             <option value="male">M</option>
                             <option value="female">F</option>
                             <option value="other">Other</option>                                                                
