@@ -7,6 +7,7 @@ import java.io.Serializable;
  * @author George
  */
 public class User implements Serializable {
+    private int ID;
     private String name;
     private String email;
     private String password;
@@ -24,6 +25,16 @@ public class User implements Serializable {
         this.gender = gender;
         this.dob = dob;
     }
+    
+    public User(int ID, String name, String email, String password, String phone, String gender, String dob) {
+        this.ID = ID;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.gender = gender;
+        this.dob = dob;
+    }
 
     public void updateInfo(String name, String email, String password, String phone, String gender, String dob) {
         this.name = name;
@@ -33,6 +44,15 @@ public class User implements Serializable {
         this.gender = gender;
         this.dob = dob;        
     }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+    
     
     public String getName() {
         return name;
