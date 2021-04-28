@@ -53,7 +53,6 @@ public class User implements Serializable {
         this.ID = ID;
     }
     
-    
     public String getName() {
         return name;
     }
