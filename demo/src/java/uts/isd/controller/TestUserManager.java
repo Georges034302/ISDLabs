@@ -45,7 +45,7 @@ public class TestUserManager {
     private void testUpdate() throws SQLException{
         int ID = Integer.parseInt(read("ID"));
         String pass = read("Password");
-        manager.updateUser(ID, read("Name"), read("Email"), pass, read("Phone"), read("Gender"), read("Date of bitrth"));
+        manager.updateUser(ID, read("Name"), read("Email"), pass, read("Phone"), read("Gender"), read("Date of birth"));
         System.out.println("User details updated successfully ");
     }
     
