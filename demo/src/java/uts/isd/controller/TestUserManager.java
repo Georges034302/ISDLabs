@@ -2,6 +2,7 @@ package uts.isd.controller;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import uts.isd.model.User;
 import uts.isd.model.dao.*;
@@ -30,7 +31,7 @@ public class TestUserManager {
 
     private void testCreate() throws SQLException {
         System.out.println("Adding user to the database: ");
-        manager.createUser(read("Name"), read("Email"), read("Password"), read("Phone"), read("Gender"), read("Date of bitrth"));
+        manager.createUser(read("Name"), read("Email"), read("Password"), read("Phone"), read("Gender"), read("Date of birth"));
         System.out.println("User added successfully ");
     }
     
@@ -56,6 +57,14 @@ public class TestUserManager {
         System.out.println("User deleted successfully");
     }
     
+    private void testFetch() throws SQLException{
+        System.out.printf("%-15s %-15s %-25s %-15s %-15s %-10s %-15s \n","ID","NAME", "EMAIL", "PASSWORD", "PHONE", "GENDER", "DATE OF BIRTH");
+        ArrayList<User> users = manager.fecthUsers();
+        users.forEach(user->System.out.printf("%-15s %-15s %-25s %-15s %-15s %-10s %-15s \n"
+                + "",user.getID(),user.getName(),user.getEmail(),user.getPassword(),user.getPhone(),user.getGender(),user.getDob()));
+        System.out.println();
+    }
+    
     private String read(String prompt) {
         System.out.print(prompt + ": ");
         return in.nextLine();
@@ -63,12 +72,13 @@ public class TestUserManager {
     private void menu() throws SQLException{
         char c;
         help();
-        while((c=read("Command [c/r/u/d/x]").charAt(0)) != 'x'){
+        while((c=read("Command [c/r/u/d/f/x]").charAt(0)) != 'x'){
             switch(c){
                 case 'c': testCreate();break;
                 case 'r': testRead(); break;
                 case 'u': testUpdate(); break;
                 case 'd': testDelete();break;
+                case 'f': testFetch();break;
                 default: help(); break;
             }
         }
@@ -78,6 +88,7 @@ public class TestUserManager {
                 + "c = Create User \n"
                 + "r = Read User by ID-Password \n"
                 + "u = Update User by ID \n"
-                + "d = Delete User by ID\n");
+                + "d = Delete User by ID\n"
+                + "f = Fetch all Users\n");
     }
 }
