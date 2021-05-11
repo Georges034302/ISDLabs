@@ -86,10 +86,10 @@ public class TestMongoDB {
     }
 
     private void testUpdate() {
-        
+
     }
     private void testDelete() {
-        
+       
     }
 
     private void view() {
@@ -100,3 +100,4 @@ public class TestMongoDB {
         mongo.showCollection();
     }
 }
+
