@@ -38,54 +38,19 @@ public class MongoDBManager extends MongoDB {
     }
 
     public void create(String name, String email, String password, String phone, String gender, String dob) {
-        Random r = new Random();
-        int low = 100000;
-        int high = 999999;
-        int id = r.nextInt(high - low) + low;
-        Document entity = new Document()
-                .append("_id", id)
-                .append("name", name)
-                .append("email", email)
-                .append("password", password)
-                .append("gender", gender)
-                .append("dob", dob);
-        this.collection.insertOne(entity);
+        
     }
 
     public void read(String id, String password) {
-        Document doc = this.collection.find(and(eq("_id", Integer.parseInt(id)), eq("password", password))).first();
-        if (doc != null) {
-            PrettyJson.printJSON(doc);
-        } else {
-            System.out.println("Unknown user!!!");
-        }
+        
     }
 
     public void update(String id, String password, String name, String email, String phone, String gender, String dob) {
-        Document doc = this.collection.find(and(eq("_id", Integer.parseInt(id)), eq("password", password))).first();
-        if (doc != null) {
-            this.collection.updateOne(
-                    and(eq("_id", Integer.parseInt(id))),
-                    combine(set("name", name),
-                            set("email", email),
-                            set("password", password),
-                            set("phone", phone),
-                            set("gender", gender),
-                            set("dob", dob)));
-            System.out.println(name + " details have been udpated.");
-        } else {
-            System.out.println("Unknown user!!!");
-        }
+        
     }
 
     public void delete(String id, String password) {
-        Document doc = this.collection.find(and(eq("_id", Integer.parseInt(id)), eq("password", password))).first();
-        if (doc != null) {
-            this.collection.deleteOne(and(eq("_id", Integer.parseInt(id)), eq("password", password)));
-            System.out.println("user " + id + " has been removed from the database!");
-        } else {
-            System.out.println("Unknown user!!!");
-        }
+        
     }
 
     //View MongoDB Collections associated with credentials
