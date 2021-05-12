@@ -16,21 +16,28 @@
         <title>Account Page</title>
     </head>
     <body onload="startTime()">
+        <% 
+                User user = (User)session.getAttribute("user");
+                String updated = (String)session.getAttribute("updated");
+        %>
         <div id="bar">
-            Edit User
-            <span id="links"> <a href="profile.jsp"> Profile</a> | <a href="logout.jsp">Logout</a></span>
+
+            Edit User <span class="message"> <%=(updated != null ? updated : "")%></span>
+            <span id="links"> 
+                <a class="button" href="MainServlet?email='<%= user.getID()%>'&password='<%=user.getPassword()%>'"> Profile </a> 
+                | 
+                <a href="logout.jsp">Logout</a></span>
         </div>
-        <%
-            User user = (User)session.getAttribute("user");
+        <%            
             String name = request.getParameter("name");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
             String phone = request.getParameter("phone");
             String gender = request.getParameter("gender");
             String dob = request.getParameter("dob");
-            String submitted = request.getParameter("submitted");
+            String submitted = request.getParameter("submitted");            
         %>
-        <form action="account.jsp" method="post">
+        <form action="UpdateServlet" method="post">
             <table class="table">
                 <tr><td>Name</td><td><input type="text" name="name" value="<%= (submitted != null)? name:user.getName() %>" ></td></tr>
                 <tr><td>Email</td><td><input type="text" name="email" value="<%= (submitted != null)?email:user.getEmail()%>"></td></tr>
@@ -44,7 +51,7 @@
                             <option value="female">F</option>
                             <option value="other">Other</option>                                                                
                         </select>
-                            <input class="date" type="date" name="dob" value="<%= (submitted != null)?dob:user.getDob() %>"/> 
+                        <input class="date" type="date" name="dob" value="<%= (submitted != null)?dob:user.getDob() %>"/> 
                     </td>
                 </tr>     
                 <input type="hidden" value="submitted" name="submitted">
@@ -53,7 +60,7 @@
         <% 
             user.updateInfo(name, email, password, phone, gender, dob);
             session.setAttribute("user", user);
-         %>
+        %>
         <div id="clock" class="footer">            
         </div>
     </body>

@@ -46,7 +46,7 @@ public class MongoDB {
     }
     
     private MongoClientURI mongoClientURI(String owner, String password, String role, String db){
-        this.authorization = "ssl=true&replicaSet=Cluster0-shard-0&authSource=" + role + "&retryWrites=true";
+        this.authorization = "ssl=true&authSource=" + role + "&retryWrites=true";
         MongoClientURI uri = new MongoClientURI(
                 ""
                 + "mongodb://" + owner + ":" + password + "@"

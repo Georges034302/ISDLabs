@@ -21,5 +21,6 @@
         <div id="clock" class="footer">
             
         </div>
+        <jsp:include page="/ConnServlet" flush="true" />
     </body>
 </html>

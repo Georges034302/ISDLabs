@@ -29,7 +29,7 @@ public class TestMongoDB {
         String pass = read("Password");
         String role = read("Role");
         String db = read("DB");
-        this.mongo = new MongoDBManager(user,pass,role,db);
+        this.mongo = new MongoDBManager(user,pass,role,db);       
         this.mongo.connect(name);
         System.out.println(">> Connected to MongoDB-" + name + " collection.\n");
     }
@@ -78,18 +78,18 @@ public class TestMongoDB {
     }
 
     private void testCreate() {
-        
+        mongo.create(read("Name"), read("Email"), read("Password"), read("Phone"), read("Gender"), read("Date of Birth"));
     }
 
-    private void testRead() throws SQLException {
-        
+    private void testRead() {
+        mongo.read(read("ID"), read("Password"));
     }
 
     private void testUpdate() {
-
+        mongo.update(read("ID"), read("Password"), read("Name"), read("Email"), read("Phone"), read("Gender"), read("Date of Birth"));
     }
     private void testDelete() {
-       
+        mongo.delete(read("ID"), read("Password"));
     }
 
     private void view() {

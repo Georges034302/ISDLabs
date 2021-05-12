@@ -49,6 +49,20 @@ public class UserManager {
         return null;
     }
 
+    public boolean verifyUser(String email, String password) throws SQLException {
+        String fetch = "SELECT * FROM ISDUSER.\"USER\" WHERE EMAIL=" + email + " AND PASSWORD='" + password + "'";
+        ResultSet rs = st.executeQuery(fetch);
+
+        while (rs.next()) {
+            String userEmail = rs.getString(3);
+            String userPass = rs.getString(4);
+
+            if (userEmail.equals(email) && userPass.equals(password))
+                return true;            
+        }
+        return false;
+    }
+    
     //Update a user by ID & password
     public void updateUser(int ID, String name, String email, String pass, String phone, String gender, String dob) throws SQLException {
         String update = "UPDATE ISDUSER.\"USER\" SET \"NAME\"='" + name + "',EMAIL='" + email + "',PASSWORD='" + pass + "',PHONE='" + phone + "',GENDER='" + gender + "',DOB='" + dob + "' WHERE ID=" + ID + " AND PASSWORD='" + pass + "'";

@@ -33,24 +33,59 @@ public class MongoDBManager extends MongoDB {
         super(owner, password, role, db);
     }
 
-    public void connect(String name) {
+   public void connect(String name) {
         this.collection = super.database.getCollection(name);
     }
 
     public void create(String name, String email, String password, String phone, String gender, String dob) {
-        
+        Random r = new Random();
+        int low = 100000;
+        int high = 999999;
+        int id = r.nextInt(high-low)+low;
+        Document entity = new Document()
+                .append("_id", id)
+                .append("name", name)
+                .append("email", email)
+                .append("password", password)
+                .append("phone", phone)
+                .append("gender", gender)
+                .append("DOB", dob);
+        this.collection.insertOne(entity);
     }
 
     public void read(String id, String password) {
-        
+        Document doc = this.collection.find(and(eq("_id",Integer.parseInt(id)),eq("password",password))).first();
+        if(doc != null)
+            PrettyJson.printJSON(doc);
+        else
+            System.out.println("Unknown User!!!");
     }
 
     public void update(String id, String password, String name, String email, String phone, String gender, String dob) {
-        
+         Document doc = this.collection.find(and(eq("_id",Integer.parseInt(id)),eq("password",password))).first();
+        if(doc != null){
+           this.collection.updateOne(
+                   eq("_id",Integer.parseInt(id)), 
+                   combine(
+                           set("name",name),
+                           set("email",email),
+                           set("password",password),
+                           set("phone",phone),
+                           set("gender",gender),
+                           set("DOB",dob)
+                   ));
+           System.out.println(name+" details have been updated.");
+        }else
+            System.out.println("Unknown User!!!");
     }
 
     public void delete(String id, String password) {
-        
+         Document doc = this.collection.find(and(eq("_id",Integer.parseInt(id)),eq("password",password))).first();
+        if(doc != null){
+            this.collection.deleteOne(and(eq("_id",Integer.parseInt(id)),eq("password",password)));
+            System.out.println(id+" account has been deleted.");
+        }else
+            System.out.println("Unknown User!!!");
     }
 
     //View MongoDB Collections associated with credentials

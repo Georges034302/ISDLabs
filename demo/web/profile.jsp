@@ -18,11 +18,16 @@
     <body onload="startTime()">
         <div id="bar">
             User Profile
-            <span id="links"> <a href="account.jsp">Account</a> | <a href="logout.jsp">Logout </a></span>
+            <%
+                User user = (User)session.getAttribute("user");
+            %>
+            <span id="links"> 
+                <a class="button" href="EditServlet?email='<%= user.getID()%>'&password='<%=user.getPassword()%>'" > Account </a> 
+                | 
+                <a class="button" href="LogoutController" > Logout </a>
+            </span>
         </div>
-        <%
-            User user = (User)session.getAttribute("user");
-        %>
+        
         <table id="users">
             <tr>
                 <th>Name</th>
