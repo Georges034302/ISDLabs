@@ -1,0 +1,95 @@
+.title{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #c9c9c9;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: center;
+}
+
+.text{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffff00;        
+}
+
+.form_title{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    color:#1d2e5f;   
+    padding: 5px;
+}
+
+.table{
+    position: fixed;
+    top:6%;
+    text-align: left;   
+    font-weight: bolder;
+    font-size: large;
+    color:#075b60;       
+}
+.table th{
+    color: white;
+}
+.table thead{
+    background-color:#4CAF50;
+}
+.table td{
+    text-align: left;
+}
+
+input{
+    background-color:#999999    ;
+    color: #3ffb09;
+    font-weight: bold;
+    font-size: 16px;
+    width: 250px;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #8ea2ad;
+    border: none;
+    border-radius: 10px; 
+    width: 80px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.select{   
+    background-color:#999999    ;
+    color: #3ffb09;
+    font-weight: bold;
+    font-size: 16px;
+    width: 122px;
+    height: 24px;    
+}
+
+.date{   
+    background-color:#999999    ;
+    color: #3ffb09;
+    font-weight: bold;
+    font-size: 16px;
+    width: 122px;
+    height: 22px;
+    
+}
+
+
