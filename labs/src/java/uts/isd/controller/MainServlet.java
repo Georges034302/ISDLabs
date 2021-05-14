@@ -29,11 +29,11 @@ public class MainServlet extends HttpServlet {
         HttpSession session = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
-        UserManager manager = (UserManager) session.getAttribute("manager");
+        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");
 
         User user = null;
         try {
-            user = manager.readUser(id, password);
+            user = userDAO.readUser(id, password);
         } catch (SQLException | NullPointerException ex ) {
             Logger.getLogger(MainServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

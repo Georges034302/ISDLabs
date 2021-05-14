@@ -15,15 +15,15 @@ import uts.isd.model.dao.*;
 
 public class ConnServlet extends HttpServlet {
 
-    private DBConnector db;
-    private UserManager manager;
+    private SQLDBConnector db;
+    private SQLUserDAO userDAO;
     private Connection conn;
 
     @Override //Create and instance of DBConnector for the deployment session
     public void init() {
 
         try {
-            db = new DBConnector();
+            db = new SQLDBConnector();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -38,15 +38,13 @@ public class ConnServlet extends HttpServlet {
 
         conn = db.connection();
         try {
-            manager = new UserManager(conn);
-            //another manager
-            //more mangers
+            userDAO = new SQLUserDAO(conn);
         } catch (SQLException ex) {
             Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        //export the DB manager to the view-session (JSPs)
-        session.setAttribute("manager", manager);
+        //export the DB userDAO to the view-session (JSPs)
+        session.setAttribute("userDAO", userDAO);
         //also add all other mangers to the current session
 
     }

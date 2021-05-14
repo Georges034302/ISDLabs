@@ -1,0 +1,18 @@
+
+.table{
+    position: fixed;
+    top:6%;
+    text-align: left;   
+    font-weight: bolder;
+    font-size: large;
+    color:#075b60;       
+}
+.table th{
+    color: white;
+}
+.table thead{
+    background-color:#4CAF50;
+}
+.table td{
+    text-align: left;
+}

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.isd.model.User;
-import uts.isd.model.dao.UserManager;
+import uts.isd.model.dao.*;
 
 /**
  *
@@ -24,11 +24,11 @@ public class EditServlet extends HttpServlet {
         HttpSession session = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
-        UserManager manager = (UserManager) session.getAttribute("manager");
+        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");
 
         User user = null;
         try {
-            user = manager.readUser(id, password);
+            user = userDAO.readUser(id, password);
             if (user != null) {
                 session.setAttribute("user", user);
                 request.getRequestDispatcher("edit.jsp").include(request, response);

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import uts.isd.model.dao.UserManager;
 import uts.isd.model.*;
+import uts.isd.model.dao.SQLUserDAO;
 
 /**
  *
@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         Validator validator = new Validator();        
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        UserManager manager = (UserManager) session.getAttribute("manager");
+        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");
         User user = null;
         validator.clear(session);
         
@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("login.jsp").include(request, response);
         } else {
             try {                
-                if (manager.verifyUser(email, password)) {
+                if (userDAO.verifyUser(email, password)) {
                     session.setAttribute("user", user);
                     request.getRequestDispatcher("profile.jsp").include(request, response);
                 } else {

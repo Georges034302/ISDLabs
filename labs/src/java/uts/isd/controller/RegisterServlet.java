@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.isd.model.User;
-import uts.isd.model.dao.UserManager;
+import uts.isd.model.dao.*;
 
 /**
  *
@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String gender = request.getParameter("gender");
         String dob = request.getParameter("dob");
-        UserManager manager = (UserManager) session.getAttribute("manager");        
+        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");        
         validator.clear(session);
         
         if(!validator.validateEmail(email)){
@@ -48,11 +48,11 @@ public class RegisterServlet extends HttpServlet {
             request.getRequestDispatcher("register.jsp").include(request, response);
         } else {
             try {                
-                if(manager.verifyUser(email,password)){
+                if(userDAO.verifyUser(email,password)){
                     session.setAttribute("existErr", "Student already exists in the Database!");
                     request.getRequestDispatcher("register.jsp").include(request, response);
                 }else{
-                    manager.createUser(name, email, name, phone, gender, dob);
+                    userDAO.createUser(name, email, name, phone, gender, dob);
                     User user = new User(name,email,password,phone,gender,dob);
                     session.setAttribute("user", user);            
                     request.getRequestDispatcher("main.jsp").include(request, response);

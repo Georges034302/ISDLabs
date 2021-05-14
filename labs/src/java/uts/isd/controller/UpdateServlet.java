@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.isd.model.User;
-import uts.isd.model.dao.UserManager;
+import uts.isd.model.dao.*;
 
 /**
  *
@@ -30,11 +30,11 @@ public class UpdateServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         String dob = request.getParameter("dob");
         User user = new User(name, email, password, phone, gender, dob);
-        UserManager manager = (UserManager) session.getAttribute("manager");
+        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");
         try {
             if (user != null) {
                 session.setAttribute("user", user);
-                manager.updateUser(id, name, email, name, phone, gender, dob);
+                userDAO.updateUser(id, name, email, name, phone, gender, dob);
                 session.setAttribute("updated", "Update was successful");
                 request.getRequestDispatcher("account.jsp").include(request, response);
             } else {
