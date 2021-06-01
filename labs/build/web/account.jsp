@@ -4,6 +4,7 @@
     Author     : george
 --%>
 
+<%@page import="uts.isd.controller.Validator"%>
 <%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,51 +17,39 @@
         <title>Account Page</title>
     </head>
     <body onload="startTime()">
-        <% 
-                User user = (User)session.getAttribute("user");
-                String updated = (String)session.getAttribute("updated");
+        <%
+            User user = (User) session.getAttribute("user");
+            String updated = (String) session.getAttribute("updated");
         %>
         <div id="bar">
 
             Edit User <span class="message"> <%=(updated != null ? updated : "")%></span>
             <span id="links"> 
-                <a class="button" href="MainServlet?email='<%= user.getID()%>'&password='<%=user.getPassword()%>'"> Profile </a> 
-                | 
+                <a href="MainServlet?email='<%= user.getEmail()%>'&password='<%=user.getPassword()%>'"> MFlix</a> 
+                 | 
                 <a href="LogoutServlet">Logout</a></span>
         </div>
-        <%            
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            String phone = request.getParameter("phone");
-            String gender = request.getParameter("gender");
-            String dob = request.getParameter("dob");
-            String submitted = request.getParameter("submitted");            
-        %>
+       
         <form action="UpdateServlet" method="post">
             <table class="table">
-                <tr><td>Name</td><td><input type="text" name="name" value="<%= (submitted != null)? name:user.getName() %>" ></td></tr>
-                <tr><td>Email</td><td><input type="text" name="email" value="<%= (submitted != null)?email:user.getEmail()%>"></td></tr>
-                <tr><td>Password</td><td><input type="password" name="password" value="<%= (submitted != null)?password:user.getPassword() %>"></td></tr>
-                <tr><td>Phone</td><td><input type="text" name="phone" value="<%= (submitted != null)?phone:user.getPhone()%>"></td></tr>                
+                <tr><td>ID</td><td><input type="text" name="id" value="<%= user.getID()%>" readonly></td></tr>
+                <tr><td>Name</td><td><input type="text" name="name" value="<%= user.getName()%>" ></td></tr>
+                <tr><td>Email</td><td><input type="text" name="email" value="<%= user.getEmail()%>"></td></tr>
+                <tr><td>Password</td><td><input type="password" name="password" value="<%= user.getPassword()%>"></td></tr>
+                <tr><td>Phone</td><td><input type="text" name="phone" value="<%= user.getPhone()%>"></td></tr>                
                 <tr><td><input class="button" type="submit" value="Update"></td>
                     <td>
                         <select class="select" name="gender">
-                            <option value="<%= (submitted != null)?gender:user.getGender()%>"><%= (submitted != null)?gender:user.getGender()%></option>
+                            <option value="<%= user.getGender()%>"><%= user.getGender()%></option>
                             <option value="male">M</option>
                             <option value="female">F</option>
                             <option value="other">Other</option>                                                                
                         </select>
-                        <input class="date" type="date" name="dob" value="<%= (submitted != null)?dob:user.getDob() %>"/> 
+                        <input class="date" type="date" name="dob" value="<%= user.getDob()%>"/> 
                     </td>
-                </tr>     
-                <input type="hidden" value="submitted" name="submitted">
+                </tr>               
             </table>
-        </form>
-        <% 
-            user.updateInfo(name, email, password, phone, gender, dob);
-            session.setAttribute("user", user);
-        %>
+        </form>  
         <div id="clock" class="footer">            
         </div>
     </body>

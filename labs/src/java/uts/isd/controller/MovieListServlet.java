@@ -5,6 +5,7 @@
  */
 package uts.isd.controller;
 
+import uts.isd.model.dao.testers.MoviesXML;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -27,20 +28,19 @@ public class MovieListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
-        MovieMongoDAO manager = (MovieMongoDAO) session.getAttribute("manager");
-        ArrayList<Movie> matches = null;
+        MovieMongoDAO manager = new MovieMongoDAO();
+        manager.connect("movies");
+        ArrayList<Movie> matches = manager.fetchMovies();
+        Movies movies = new Movies();
+        movies.setMovies(matches);
         try {
-            matches = manager.fetchMovies();
-            Movies movies = new Movies();
             MoviesXML.generateXML(movies);
+            String xmltxt = MoviesXML.marshal(movies);
+            session.setAttribute("xmltxt", xmltxt);
         } catch (JAXBException ex) {
             Logger.getLogger(MovieListServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-        matches.stream().forEach((Movie movie) -> {
-            System.out.print(movie.getID());
-        });        
-    }    
+        response.sendRedirect("moviesView_BAK.jsp");
+    }
 }

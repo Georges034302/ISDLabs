@@ -6,7 +6,6 @@
 package uts.isd.controller;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -27,14 +26,15 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        int id = Integer.parseInt(request.getParameter("id"));
+        
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
-        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");
+        UserMongoDAO userDAO = (UserMongoDAO) session.getAttribute("userDAO");
 
         User user = null;
         try {
-            user = userDAO.readUser(id, password);
-        } catch (SQLException | NullPointerException ex ) {
+            user = userDAO.login(email, password);
+        } catch (NullPointerException ex ) {
             Logger.getLogger(MainServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (user != null) {
@@ -42,7 +42,7 @@ public class MainServlet extends HttpServlet {
             request.getRequestDispatcher("main.jsp").include(request, response);
         } else {
             session.setAttribute("existErr", "User does not exist in the Database!");
-            request.getRequestDispatcher("maine.jsp").include(request, response);
+            request.getRequestDispatcher("main.jsp").include(request, response);
         }        
         request.getRequestDispatcher("main.jsp").include(request, response);
     }    

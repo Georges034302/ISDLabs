@@ -25,6 +25,7 @@ public class RegisterServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         Validator validator = new Validator();
+        Validator.clear(session);
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");

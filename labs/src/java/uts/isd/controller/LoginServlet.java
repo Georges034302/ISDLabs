@@ -21,6 +21,7 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         Validator validator = new Validator();
+        Validator.clear(session);
         String email = request.getParameter("email");
         String password = request.getParameter("password"); 
         UserMongoDAO userDAO = (UserMongoDAO) session.getAttribute("userDAO");
@@ -34,18 +35,18 @@ public class LoginServlet extends HttpServlet {
 
         if (!validator.validateEmail(email)) {
             session.setAttribute("emailErr", "Error: Email format incorrect");
-            request.getRequestDispatcher("login.jsp").include(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         } else if (!validator.validatePassword(password)) {
             session.setAttribute("passErr", "Error: Password format incorrect");
-            request.getRequestDispatcher("login.jsp").include(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         } else {
             try {
                 if (user != null) {
                     session.setAttribute("user", user);
-                    request.getRequestDispatcher("main.jsp").include(request, response);
+                    request.getRequestDispatcher("main.jsp").forward(request, response);
                 } else {
                     session.setAttribute("existErr", "User does not exist in the Database!");
-                    request.getRequestDispatcher("login.jsp").include(request, response);
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
                 }
             } catch (NullPointerException ex) {
                 System.out.println(ex.getMessage() == null ? "Cannot open Mongo Connection" : "welcome");

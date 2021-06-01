@@ -4,6 +4,7 @@
     Author     : George
 --%>
 
+<%@page import="uts.isd.controller.Validator"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,7 +22,7 @@
             String passErr = (String) session.getAttribute("passErr");
         %>
         <div id="bar">Sign In <span class="message"> <%=(existErr != null ? existErr : "")%></span>
-            <span id="links"><a href="register.jsp">Register</a> | <a href="index.jsp">Home</a></span>
+            <span id="links"><a href="register.jsp" onclick="<%Validator.clear(session);%>" >Register</a> | <a href="index.jsp" onclick="<%Validator.clear(session);%>">Home</a></span>
         </div>
         
         <form action="LoginServlet" method="post">

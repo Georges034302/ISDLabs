@@ -25,11 +25,12 @@
 
 .table{
     position: fixed;
-    top:6%;
+    top:8%;
     text-align: left;   
     font-weight: bolder;
     font-size: large;
-    color:#075b60;       
+    color:white;   
+    opacity: 0.8;    
 }
 .table th{
     color: white;
@@ -39,14 +40,6 @@
 }
 .table td{
     text-align: left;
-}
-
-input{
-    background-color:#999999    ;
-    color: #3ffb09;
-    font-weight: bold;
-    font-size: 16px;
-    width: 250px;
 }
 
 .button {
@@ -61,11 +54,11 @@ input{
     color: #fff;
     background-color: #8ea2ad;
     border: none;
-    border-radius: 10px; 
-    width: 80px;
+    border-radius: 8px; 
+    width: 100px;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: green;}
 
 .button:active {
     background-color: #3e8e41;
@@ -74,22 +67,28 @@ input{
 }
 
 .select{   
-    background-color:#999999    ;
-    color: #3ffb09;
-    font-weight: bold;
+    background-color:#f4f4fc;
+    color: #0c0c14;
     font-size: 16px;
     width: 122px;
-    height: 24px;    
+    height: 24px;  
+    font-weight: bold;
 }
 
 .date{   
-    background-color:#999999    ;
-    color: #3ffb09;
-    font-weight: bold;
+    background-color:#f4f4fc;
+    color: #0c0c14;
     font-size: 16px;
-    width: 122px;
-    height: 22px;
-    
+    font-weight: bold;
+    width: 173px;
+    height: 22px;    
 }
-
+input{
+    background-color:#f4f4fc;
+    color: #0c0c14;
+    font-size: 16px;
+    width: 300px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
 

@@ -16,7 +16,7 @@
         </html>
     </xsl:template>
     <xsl:template match="movies">
-        <table class="table" id="moviesTable">
+        <table id="movies">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -47,7 +47,7 @@
                 <xsl:value-of select="genre" />
             </td>
              <td>
-                <xsl:value-of select="raing" />
+                <xsl:value-of select="rating" />
             </td>
              <td>
                 <xsl:value-of select="year" />
@@ -56,7 +56,7 @@
                 <xsl:value-of select="price" />
             </td>
             <td>
-                <a href="{url}" target="_blank" >
+                <a href="{url}" target="_blank">
                     <xsl:value-of select="url" />
                 </a>
             </td>            
