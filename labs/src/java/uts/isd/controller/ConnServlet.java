@@ -1,10 +1,6 @@
 package uts.isd.controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,18 +11,20 @@ import uts.isd.model.dao.*;
 
 public class ConnServlet extends HttpServlet {
 
-    private SQLDBConnector db;
-    private SQLUserDAO userDAO;
-    private Connection conn;
+    //private SQLDBConnector db;
+    //private SQLUserDAO userDAO;
+    //private Connection conn;
+    private MovieMongoDAO manager;
+    private UserMongoDAO userDAO;
 
     @Override //Create and instance of DBConnector for the deployment session
     public void init() {
 
-        try {
-            db = new SQLDBConnector();
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //db = new SQLDBConnector();
+        userDAO = new UserMongoDAO();
+        manager = new MovieMongoDAO();
+        userDAO.connect("users");
+        manager.connect("movies");
     }
 
     @Override //Add the DBConnector, DBManager, Connection instances to the session
@@ -36,25 +34,15 @@ public class ConnServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
 
-        conn = db.connection();
-        try {
-            userDAO = new SQLUserDAO(conn);
-        } catch (SQLException ex) {
-            Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
+        //conn = db.connection();
+        //userDAO = new SQLUserDAO(conn);
         //export the DB userDAO to the view-session (JSPs)
         session.setAttribute("userDAO", userDAO);
-        //also add all other mangers to the current session
-
+        session.setAttribute("manager", manager);
     }
 
     @Override //Destroy the servlet and release the resources of the application (terminate also the db connection)
     public void destroy() {
-        try {
-            db.closeConnection();
-        } catch (SQLException ex) {
-            Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //db.closeConnection();
     }
 }

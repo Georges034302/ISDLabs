@@ -105,7 +105,18 @@ public class MovieMongoDAO extends MongoDB {
     
     public ArrayList<Movie> fetchMovies(){
         ArrayList<Movie> temp = new ArrayList<>();
-        
+        MongoCursor<Document> cursor = this.collection.find().iterator();
+        while (cursor.hasNext()) {
+            Document d = cursor.next();
+            int id = d.getInteger("_id");
+            String name = d.getString("name");
+            String genre = d.getString("genre");
+            double rating = d.getDouble("rating");
+            int year = d.getInteger("year");
+            double price = d.getDouble("price");
+            String url = d.getString("url");
+            temp.add(new Movie(id,name,genre,rating,year,price,url));
+        }
         return temp;
     }
 }

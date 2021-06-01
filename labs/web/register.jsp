@@ -25,7 +25,7 @@
             <span id="links"><a href="login.jsp">Login</a> | <a href="index.jsp">Home</a></span>
         </div>
         
-        <form action="welcome.jsp" method="post">
+        <form action="RegisterServlet" method="post">
             <table class="table">
                 <tr><td>Full Name:</td><td><input type="text" placeholder="<%=(nameErr != null ? nameErr : "Enter name")%>" name="name"></td></tr>
                 <tr><td>Email:</td><td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter email")%>" name="email"></td></tr>

@@ -21,7 +21,11 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Handbook URL</th>                    
+                    <th>Genre</th> 
+                    <th>Rating</th>                   
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>IMDB URL</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +42,18 @@
             </td>
             <td>
                 <xsl:value-of select="name" />
+            </td>
+             <td>
+                <xsl:value-of select="genre" />
+            </td>
+             <td>
+                <xsl:value-of select="raing" />
+            </td>
+             <td>
+                <xsl:value-of select="year" />
+            </td>
+             <td>
+                <xsl:value-of select="price" />
             </td>
             <td>
                 <a href="{url}" target="_blank" >

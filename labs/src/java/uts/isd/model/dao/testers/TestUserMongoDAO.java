@@ -68,7 +68,7 @@ public class TestUserMongoDAO {
     }
 
     private void testRead() {
-        mongo.read(read("ID"), read("Password"));
+        mongo.read(read("Email"), read("Password"));
     }
 
     private void testUpdate() {

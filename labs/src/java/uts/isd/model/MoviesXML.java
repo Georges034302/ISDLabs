@@ -19,11 +19,11 @@ public class MoviesXML {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, JAXBException {
         MovieMongoDAO manager = new MovieMongoDAO();
+        manager.connect("movies");
         ArrayList<Movie> matches = manager.fetchMovies();
         Movies movies = new Movies();
         movies.setMovies(matches);
         MoviesXML.generateXML(movies);
-        System.out.print(marshal(movies));
     }
 
     public static void generateXML(Movies movies) throws JAXBException {

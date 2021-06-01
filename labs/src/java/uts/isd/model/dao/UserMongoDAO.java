@@ -24,7 +24,7 @@ public class UserMongoDAO extends MongoDB {
     private MongoCollection<Document> collection;
 
     public UserMongoDAO() {
-        super();
+        super();        
     }
 
     public UserMongoDAO(String owner, String password, String role, String db) {
@@ -51,13 +51,24 @@ public class UserMongoDAO extends MongoDB {
         this.collection.insertOne(entity);
     }
 
-    public void read(String id, String password) {
-        Document doc = this.collection.find(and(eq("_id", Integer.parseInt(id)), eq("password", password))).first();
-        if (doc != null) {
-            PrettyJson.printJSON(doc);
-        } else {
-            System.out.println("Unknown User!!!");
-        }
+    public boolean verify(String email, String password) {
+        Document doc = this.collection.find(and(eq("email", email), eq("password", password))).first();
+        return doc != null;
+    }
+
+    public void read(String email, String password){
+        Document doc = this.collection.find(and(eq("email", email), eq("password", password))).first();
+        PrettyJson.printJSON(doc);
+    }
+    
+    public User login(String email, String password) {
+        Document d = this.collection.find(and(eq("email", email), eq("password", password))).first();
+        int id = d.getInteger("_id");
+        String name = d.getString("name");;
+        String phone = d.getString("phone");
+        String gender = d.getString("gender");
+        String DOB = d.getString("DOB");
+        return new User(id,name,email,password,phone,gender,DOB);
     }
 
     public void update(String id, String password, String name, String email, String phone, String gender, String dob) {

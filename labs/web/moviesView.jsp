@@ -4,24 +4,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 
-<%
-    MovieManager manager = (MovieManager) session.getAttribute("manager");    
-    ArrayList<Movie> matches = manager.fetchMovies();
-%>
-
 <c:set var = "xmltext">   
 <c:import url = "xsl/movies.xsl" var = "xslt"/>
-    <movies>
-        <%            
-            for (Movie movie : matches) {
-        %>
-        <movie>
-            <ID><%= movie.getID()%></ID>
-            <name><%= movie.getName()%></name>            
-            <url><%= movie.getUrl() %></url>                       
-        </movie>
-        <%}%>          
-    </movies>
+<jsp:include page="/MovieListServlet" flush="true"/>
 </c:set>
 <x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>
 

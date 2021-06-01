@@ -39,11 +39,11 @@ public class MainServlet extends HttpServlet {
         }
         if (user != null) {
             session.setAttribute("user", user);
-            request.getRequestDispatcher("profile.jsp").include(request, response);
+            request.getRequestDispatcher("main.jsp").include(request, response);
         } else {
             session.setAttribute("existErr", "User does not exist in the Database!");
-            request.getRequestDispatcher("profile.jsp").include(request, response);
+            request.getRequestDispatcher("maine.jsp").include(request, response);
         }        
-        request.getRequestDispatcher("profile.jsp").include(request, response);
+        request.getRequestDispatcher("main.jsp").include(request, response);
     }    
 }

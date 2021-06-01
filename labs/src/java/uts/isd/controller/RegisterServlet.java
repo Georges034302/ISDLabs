@@ -6,9 +6,6 @@
 package uts.isd.controller;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,45 +18,51 @@ import uts.isd.model.dao.*;
  *
  * @author George
  */
-public class RegisterServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet {  
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        Validator validator = new Validator();         
+        Validator validator = new Validator();
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String phone = request.getParameter("phone");
         String gender = request.getParameter("gender");
         String dob = request.getParameter("dob");
-        SQLUserDAO userDAO = (SQLUserDAO) session.getAttribute("userDAO");        
+        UserMongoDAO userDAO = (UserMongoDAO) session.getAttribute("userDAO");
+        User user = null;
+        try {
+            user = userDAO.login(email, password);
+        } catch (NullPointerException ex) {
+            System.out.println(ex.getMessage() == null ? "User does not exist" : "welcome");
+        }
         validator.clear(session);
-        
-        if(!validator.validateEmail(email)){
+
+        if (!validator.validateEmail(email)) {
             session.setAttribute("emailErr", "Error: Email format is incorrect");
             request.getRequestDispatcher("register.jsp").include(request, response);
-        }else if(!validator.validateName(name)){
+        } else if (!validator.validateName(name)) {
             session.setAttribute("nameErr", "Error: Name format is incorrect");
             request.getRequestDispatcher("register.jsp").include(request, response);
         } else if (!validator.validatePassword(password)) {
             session.setAttribute("passErr", "Error: Passowrd format is incorrect");
             request.getRequestDispatcher("register.jsp").include(request, response);
         } else {
-            try {                
-                if(userDAO.verifyUser(email,password)){
+            try {
+                if (user != null) {
                     session.setAttribute("existErr", "Student already exists in the Database!");
                     request.getRequestDispatcher("register.jsp").include(request, response);
-                }else{
-                    userDAO.createUser(name, email, name, phone, gender, dob);
-                    User user = new User(name,email,password,phone,gender,dob);
-                    session.setAttribute("user", user);            
+                } else {
+                    userDAO.create(name, email, name, phone, gender, dob);
+                    user = new User(name, email, password, phone, gender, dob);
+                    session.setAttribute("user", user);
                     request.getRequestDispatcher("main.jsp").include(request, response);
                 }
-            } catch (SQLException ex) {
-                Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
-            }            
-        }          
+            } catch (NullPointerException ex) {
+                System.out.println(ex.getMessage() == null ? "Cannot open Mongo Connection" : "welcome");
+            }
+        }
     }
 }

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    version="4.0">
     <servlet>
         <servlet-name>ConnServlet</servlet-name>
         <servlet-class>uts.isd.controller.ConnServlet</servlet-class>
@@ -29,7 +33,7 @@
         <servlet-class>uts.isd.controller.MainServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ProductListServlet</servlet-name>
+        <servlet-name>MovieListServlet</servlet-name>
         <servlet-class>uts.isd.controller.MovieListServlet</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -61,8 +65,8 @@
         <url-pattern>/MainServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ProductListServlet</servlet-name>
-        <url-pattern>/ProductListServlet</url-pattern>
+        <servlet-name>MovieListServlet</servlet-name>
+        <url-pattern>/MovieListServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

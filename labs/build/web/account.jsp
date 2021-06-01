@@ -26,7 +26,7 @@
             <span id="links"> 
                 <a class="button" href="MainServlet?email='<%= user.getID()%>'&password='<%=user.getPassword()%>'"> Profile </a> 
                 | 
-                <a href="logout.jsp">Logout</a></span>
+                <a href="LogoutServlet">Logout</a></span>
         </div>
         <%            
             String name = request.getParameter("name");

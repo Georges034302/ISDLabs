@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "movie")
 public class Movie implements Serializable{
     @XmlElement(name = "ID")
-    private String ID;   
+    private int ID;   
     @XmlElement(name = "name")
     private String name; 
     @XmlElement(name = "genre")
@@ -29,25 +29,28 @@ public class Movie implements Serializable{
     private String url;
 
     public Movie() { }
-    
-    public Movie(String ID, String name, String genre,double rating, double price, String url) {
+
+    public Movie(int ID, String name, String genre, double rating, int year, double price, String url) {
         this.ID = ID;
         this.name = name;
         this.genre = genre;
         this.rating = rating;
+        this.year = year;
         this.price = price;
         this.url = url;
     }
+    
 
-    public boolean match(String ID){
-        return this.ID.equals(ID);
+
+    public boolean match(int ID){
+        return this.ID == ID;
     }
     
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 

@@ -17,10 +17,9 @@
         <div id="bar">ISD Demo
             <span id="links"><a href="login.jsp">Login</a> | <a href="register.jsp">Register</a></span>
         </div>
-        
+        <jsp:include page="ConnServlet" flush="true"/>
         <div id="clock" class="footer">
             
-        </div>
-        <jsp:include page="/ConnServlet" flush="true" />
+        </div>        
     </body>
 </html>
