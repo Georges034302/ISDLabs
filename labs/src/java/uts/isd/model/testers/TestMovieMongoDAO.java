@@ -1,4 +1,4 @@
-package uts.isd.model.dao.testers;
+package uts.isd.model.testers;
 
 /**
  *
@@ -6,19 +6,19 @@ package uts.isd.model.dao.testers;
  */
 import java.sql.*;
 import java.util.*;
-import uts.isd.model.dao.*;
+import uts.isd.model.dao.mongo.*;
 
-public class TestUserMongoDAO {
+public class TestMovieMongoDAO {
 
     private static final Scanner in = new Scanner(System.in);
-    private UserMongoDAO mongo;
+    private MovieMongoDAO mongo;
 
     public static void main(String[] args) throws SQLException {
-        TestUserMongoDAO testDB = new TestUserMongoDAO();        
+        TestMovieMongoDAO testDB = new TestMovieMongoDAO();        
         testDB.runQueries();
     }
 
-    public TestUserMongoDAO() {        
+    public TestMovieMongoDAO() {        
         connect();
     }
 
@@ -32,7 +32,7 @@ public class TestUserMongoDAO {
             String db = read("DB");
         */
         String collection = read("Collection");
-        this.mongo = new UserMongoDAO();       
+        this.mongo = new MovieMongoDAO();       
         this.mongo.connect(collection);
         System.out.println(">> Connected to MongoDB-" + collection + " collection.\n");
     }
@@ -42,7 +42,7 @@ public class TestUserMongoDAO {
         return in.nextLine().charAt(0);
     }
 
-    void runQueries() throws SQLException {
+    private void runQueries() throws SQLException {
         char c;
 
         while ((c = readChoice()) != '*') {
@@ -64,18 +64,24 @@ public class TestUserMongoDAO {
     }
 
     private void testCreate() {
-        mongo.create(read("Name"), read("Email"), read("Password"), read("Phone"), read("Gender"), read("Date of Birth"));
+        mongo.create(read("Name"), read("Genre"), 
+                Double.parseDouble(read("Rating")), 
+                Integer.parseInt(read("year")), 
+                Double.parseDouble(read("Price")), 
+                read("URL"));
     }
 
     private void testRead() {
-        mongo.read(read("Email"), read("Password"));
+        mongo.read(read("ID"), read("Password"));
     }
 
     private void testUpdate() {
-        mongo.update(read("ID"), read("Password"), read("Name"), read("Email"), read("Phone"), read("Gender"), read("Date of Birth"));
+        mongo.update(read("Name"), read("year"),
+                Double.parseDouble(read("Rating")), 
+                Double.parseDouble(read("Price")));
     }
     private void testDelete() {
-        mongo.delete(read("ID"), read("Password"));
+        mongo.delete(read("Name"), read("Year"));
     }
 
     private void view() {

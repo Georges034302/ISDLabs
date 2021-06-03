@@ -1,6 +1,5 @@
-<%@page import="uts.isd.model.dao.testers.MoviesXML"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="uts.isd.model.dao.*"%>
+<%@page import="uts.isd.model.dao.mongo.*"%>
 <%@page import="uts.isd.model.*" import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>

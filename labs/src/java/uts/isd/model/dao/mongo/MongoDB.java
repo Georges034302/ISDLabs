@@ -1,7 +1,7 @@
 /*
  * MongoDB super class setup the Mongo Atlas connection.
  */
-package uts.isd.model.dao;
+package uts.isd.model.dao.mongo;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientSettings;

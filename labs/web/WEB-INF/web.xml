@@ -5,12 +5,24 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
     version="4.0">
     <servlet>
-        <servlet-name>ConnServlet</servlet-name>
-        <servlet-class>uts.isd.controller.ConnServlet</servlet-class>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>uts.isd.controller.EditServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>uts.isd.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>uts.isd.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>uts.isd.controller.MainServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MongoServlet</servlet-name>
+        <servlet-class>uts.isd.controller.mongo.MongoServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
@@ -21,28 +33,29 @@
         <servlet-class>uts.isd.controller.UpdateServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>uts.isd.controller.LogoutServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>EditServlet</servlet-name>
-        <servlet-class>uts.isd.controller.EditServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>MainServlet</servlet-name>
-        <servlet-class>uts.isd.controller.MainServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>MovieListServlet</servlet-name>
-        <servlet-class>uts.isd.controller.MovieListServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
-        <url-pattern>/ConnServlet</url-pattern>
+        <servlet-class>uts.isd.controller.ConnServlet</servlet-class>
+    </servlet>
+    <!-- Sevlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/EditServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/MainServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MongoServlet</servlet-name>
+        <url-pattern>/MongoServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -53,20 +66,8 @@
         <url-pattern>/UpdateServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LogoutServlet</servlet-name>
-        <url-pattern>/LogoutServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditServlet</servlet-name>
-        <url-pattern>/EditServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>MainServlet</servlet-name>
-        <url-pattern>/MainServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>MovieListServlet</servlet-name>
-        <url-pattern>/MovieListServlet</url-pattern>
+        <servlet-name>ConnServlet</servlet-name>
+        <url-pattern>/ConnServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

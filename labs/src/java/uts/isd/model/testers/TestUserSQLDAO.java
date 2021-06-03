@@ -1,11 +1,11 @@
-package uts.isd.model.dao.testers;
+package uts.isd.model.testers;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import uts.isd.model.User;
-import uts.isd.model.dao.*;
+import uts.isd.model.dao.sql.*;
 
 /**
  *
@@ -21,12 +21,12 @@ public class TestUserSQLDAO {
     
     private SQLDBConnector connector;
     private Connection conn;
-    private SQLUserDAO manager;
+    private UserSQLDAO manager;
 
     public TestUserSQLDAO() throws ClassNotFoundException, SQLException {
         connector = new SQLDBConnector();
         conn = connector.connection();
-        manager = new SQLUserDAO(conn);
+        manager = new UserSQLDAO(conn);
     }
 
     private void testCreate() throws SQLException {
@@ -36,9 +36,9 @@ public class TestUserSQLDAO {
     }
     
     private void testRead() throws SQLException{
-        int ID = Integer.parseInt(read("ID"));
+        String email = read("Email");
         String pass = read("Password");
-        User user = manager.readUser(ID, pass);
+        User user = manager.login(email, pass);
         String exist = (user != null) ? "User exists in the database" : "User does not exist!!!";
         System.out.println(exist);
     }
@@ -46,22 +46,23 @@ public class TestUserSQLDAO {
     private void testUpdate() throws SQLException{
         int ID = Integer.parseInt(read("ID"));
         String pass = read("Password");
-        manager.updateUser(ID, read("Name"), read("Email"), pass, read("Phone"), read("Gender"), read("Date of birth"));
+        manager.update(ID, read("Name"), read("Email"), pass, read("Phone"), read("Gender"), read("Date of birth"));
         System.out.println("User details updated successfully ");
     }
     
     private void testDelete() throws SQLException{
         int ID = Integer.parseInt(read("ID"));
         String pass = read("Password");
-        manager.deleteUser(ID, pass);
+        manager.delete(ID, pass);
         System.out.println("User deleted successfully");
     }
     
     private void testFetch() throws SQLException{
-        System.out.printf("%-15s %-15s %-25s %-15s %-15s %-10s %-15s \n","ID","NAME", "EMAIL", "PASSWORD", "PHONE", "GENDER", "DATE OF BIRTH");
+        System.out.printf("\n%-15s %-15s %-25s %-15s %-15s %-10s %-15s \n","ID","NAME", "EMAIL", "PASSWORD", "PHONE", "GENDER", "DATE OF BIRTH");
         ArrayList<User> users = manager.fecthUsers();
-        users.forEach(user->System.out.printf("%-15s %-15s %-25s %-15s %-15s %-10s %-15s \n"
-                + "",user.getID(),user.getName(),user.getEmail(),user.getPassword(),user.getPhone(),user.getGender(),user.getDob()));
+        for (User user : users) {
+            System.out.printf("%-15s %-15s %-25s %-15s %-15s %-10s %-15s \n",user.getID(),user.getName(),user.getEmail(),user.getPassword(),user.getPhone(),user.getGender(),user.getDob());
+        }
         System.out.println();
     }
     

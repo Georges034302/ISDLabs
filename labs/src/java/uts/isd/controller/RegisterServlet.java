@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uts.isd.controller;
 
 import java.io.IOException;
@@ -11,8 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import uts.isd.controller.Validator;
 import uts.isd.model.User;
-import uts.isd.model.dao.*;
+import uts.isd.model.dao.mongo.*;
 
 /**
  *
@@ -33,6 +29,7 @@ public class RegisterServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         String dob = request.getParameter("dob");
         UserMongoDAO userDAO = (UserMongoDAO) session.getAttribute("userDAO");
+        //UserSQLDAO userDAO = (UserSQLDAO) session.getAttribute("userDAO");
         User user = null;
         try {
             user = userDAO.login(email, password);

@@ -1,4 +1,4 @@
-package uts.isd.model.dao;
+package uts.isd.model.dao.mongo;
 
 /**
  *

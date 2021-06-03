@@ -14,7 +14,7 @@
         <title>Home Page</title>
     </head>
     <body onload="startTime()">
-        <div id="bar">ISD Demo
+        <div id="bar">M-Flix Review 
             <span id="links"><a href="login.jsp">Login</a> | <a href="register.jsp">Register</a></span>
         </div>
         <jsp:include page="ConnServlet" flush="true"/>

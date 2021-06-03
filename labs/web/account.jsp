@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 15/03/2021, 3:05:56 PM
-    Author     : george
---%>
-
 <%@page import="uts.isd.controller.Validator"%>
 <%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -1,4 +1,4 @@
-package uts.isd.model.dao;
+package uts.isd.model.dao.sql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,11 +11,11 @@ import uts.isd.model.User;
  *
  * @author george
  */
-public class SQLUserDAO {
+public class UserSQLDAO {
 
     private Statement st;
 
-    public SQLUserDAO(Connection conn) throws SQLException {
+    public UserSQLDAO(Connection conn) throws SQLException {
         st = conn.createStatement();
     }
 
@@ -27,18 +27,15 @@ public class SQLUserDAO {
     }
 
     //Read a user by ID and email
-    public User readUser(int ID, String password) throws SQLException {
-        String fetch = "SELECT * FROM ISDUSER.\"USER\" WHERE ID=" + ID + " AND PASSWORD='" + password + "'";//read from where ID = and password = 
-
+    public User login(String email, String password) throws SQLException {
+        String fetch = "SELECT * FROM ISDUSER.\"USER\" WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'"; 
         ResultSet rs = st.executeQuery(fetch);
-
-        while (rs.next()) {
-            int userID = Integer.parseInt(rs.getString(1));
+        while (rs.next()) {            
             String userPass = rs.getString(4);
-
-            if (userID == ID && userPass.equals(password)) {
-                String name = rs.getString(2);
-                String email = rs.getString(3);
+            String userEmail = rs.getString(3);
+            if (userEmail.equals(email) && userPass.equals(password)) {
+                int ID = Integer.parseInt(rs.getString(1));
+                String name = rs.getString(2);                
                 String phone = rs.getString(5);
                 String gender = rs.getString(6);
                 String dob = rs.getString(7);
@@ -49,7 +46,7 @@ public class SQLUserDAO {
         return null;
     }
 
-    public boolean verifyUser(String email, String password) throws SQLException {
+    public boolean verify(String email, String password) throws SQLException {
         String fetch = "SELECT * FROM ISDUSER.\"USER\" WHERE EMAIL=" + email + " AND PASSWORD='" + password + "'";
         ResultSet rs = st.executeQuery(fetch);
 
@@ -64,13 +61,13 @@ public class SQLUserDAO {
     }
     
     //Update a user by ID & password
-    public void updateUser(int ID, String name, String email, String pass, String phone, String gender, String dob) throws SQLException {
+    public void update(int ID, String name, String email, String pass, String phone, String gender, String dob) throws SQLException {
         String update = "UPDATE ISDUSER.\"USER\" SET \"NAME\"='" + name + "',EMAIL='" + email + "',PASSWORD='" + pass + "',PHONE='" + phone + "',GENDER='" + gender + "',DOB='" + dob + "' WHERE ID=" + ID + " AND PASSWORD='" + pass + "'";
         st.executeUpdate(update);
     }
 
     //Delete a user by ID & password
-    public void deleteUser(int ID, String password) throws SQLException {
+    public void delete(int ID, String password) throws SQLException {
         String delete = "DELETE FROM ISDUSER.\"USER\" WHERE ID=" + ID + " AND PASSWORD='" + password + "'";
         st.executeUpdate(delete);
     }

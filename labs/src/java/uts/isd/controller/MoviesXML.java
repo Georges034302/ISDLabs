@@ -1,4 +1,4 @@
-package uts.isd.model.dao.testers;
+package uts.isd.controller;
 
 import java.io.StringWriter;
 import java.sql.SQLException;
@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import uts.isd.model.Movie;
 import uts.isd.model.Movies;
-import uts.isd.model.dao.*;
+import uts.isd.model.dao.mongo.*;
 
 /**
  *

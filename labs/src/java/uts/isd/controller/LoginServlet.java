@@ -1,14 +1,18 @@
 package uts.isd.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import uts.isd.controller.Validator;
 import uts.isd.model.*;
-import uts.isd.model.dao.MovieMongoDAO;
-import uts.isd.model.dao.UserMongoDAO;
+import uts.isd.model.dao.mongo.*;
+import uts.isd.model.dao.sql.UserSQLDAO;
 
 /**
  *
@@ -24,7 +28,8 @@ public class LoginServlet extends HttpServlet {
         Validator.clear(session);
         String email = request.getParameter("email");
         String password = request.getParameter("password"); 
-        UserMongoDAO userDAO = (UserMongoDAO) session.getAttribute("userDAO");
+        UserMongoDAO userDAO = (UserMongoDAO) session.getAttribute("userDAO"); 
+        //UserSQLDAO userDAO = (UserSQLDAO) session.getAttribute("userDAO");
         User user = null;
         try {
             user = userDAO.login(email, password);
