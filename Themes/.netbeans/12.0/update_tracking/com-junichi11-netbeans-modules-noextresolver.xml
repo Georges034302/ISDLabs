@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="com.junichi11.netbeans.modules.noextresolver">
-    <module_version install_time="1611465097038" last="true" origin="NetBeans Plugin Portal" specification_version="0.12.1">
-        <file crc="2532024758" name="config/Modules/com-junichi11-netbeans-modules-noextresolver.xml"/>
-        <file crc="1430893400" name="modules/com-junichi11-netbeans-modules-noextresolver.jar"/>
-    </module_version>
-</module>

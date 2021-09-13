@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="io.github.tristanjl.netbeansperforce">
-    <module_version install_time="1611465098380" last="true" origin="NetBeans Plugin Portal" specification_version="1.3">
-        <file crc="1031850035" name="config/Modules/io-github-tristanjl-netbeansperforce.xml"/>
-        <file crc="1498776195" name="modules/ext/io.github.tristanjl.netbeansperforce/org-apache-commons/commons-lang3.jar"/>
-        <file crc="2083590327" name="modules/io-github-tristanjl-netbeansperforce.jar"/>
-    </module_version>
-</module>

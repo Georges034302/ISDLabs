@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE platform PUBLIC "-//NetBeans//DTD Java PlatformDefinition 1.0//EN" "http://www.netbeans.org/dtds/java-platformdefinition-1_0.dtd">
-<platform default="yes" name="JDK 1.8 (Default)">
-    <properties>
-        <property name="platform.ant.name" value="default_platform"/>
-    </properties>
-</platform>

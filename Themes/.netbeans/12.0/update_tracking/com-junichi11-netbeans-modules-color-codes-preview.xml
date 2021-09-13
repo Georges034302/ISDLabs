@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="com.junichi11.netbeans.modules.color.codes.preview">
-    <module_version install_time="1611465098442" last="true" origin="NetBeans Plugin Portal" specification_version="0.13.2">
-        <file crc="1358179879" name="config/Modules/com-junichi11-netbeans-modules-color-codes-preview.xml"/>
-        <file crc="4106042798" name="modules/com-junichi11-netbeans-modules-color-codes-preview.jar"/>
-        <file crc="2326578393" name="update_tracking/com-junichi11-netbeans-modules-color-codes-preview.xml"/>
-    </module_version>
-</module>

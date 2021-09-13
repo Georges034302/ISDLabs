@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<tc-ref version="2.2">
-    <module name="org.netbeans.modules.php.editor" spec="1.13.0" />
-    <tc-id id="PhpHierarchyTopComponent" />
-    <state opened="false" />
-    <previousMode name="commonpalette"  index="0"  />
-</tc-ref>

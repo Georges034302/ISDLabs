@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="com.revivius.nb.darcula">
-    <module_version install_time="1611491477644" last="true" origin="1501524971_nb-darcula-1.6.nbm" specification_version="1.6">
-        <file crc="2024502034" name="config/Modules/com-revivius-nb-darcula.xml"/>
-        <file crc="2083000153" name="modules/com-revivius-nb-darcula.jar"/>
-        <file crc="3754044500" name="modules/ext/com.revivius.nb-darcula/com-bulenkov/darcula.jar"/>
-    </module_version>
-</module>

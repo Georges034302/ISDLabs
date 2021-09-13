@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="org.netbeans.modules.php.wordpress">
-    <module_version install_time="1611465097002" last="true" origin="NetBeans Plugin Portal" specification_version="1.1.0">
-        <file crc="3542828712" name="config/Modules/org-netbeans-modules-php-wordpress.xml"/>
-        <file crc="1165974384" name="modules/org-netbeans-modules-php-wordpress.jar"/>
-    </module_version>
-</module>

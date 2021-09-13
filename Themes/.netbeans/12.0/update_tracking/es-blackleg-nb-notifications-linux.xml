@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="es.blackleg.nb.notifications.linux">
-    <module_version install_time="1611465097464" last="true" origin="NetBeans Plugin Portal" specification_version="1.2.0">
-        <file crc="3637136264" name="config/Modules/es-blackleg-nb-notifications-linux.xml"/>
-        <file crc="1953554789" name="modules/es-blackleg-nb-notifications-linux.jar"/>
-    </module_version>
-</module>

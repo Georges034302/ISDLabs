@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="io.github.tristanjl.nb.externalcommmands">
-    <module_version install_time="1611465097693" last="true" origin="NetBeans Plugin Portal" specification_version="1.2">
-        <file crc="1879176597" name="config/Modules/io-github-tristanjl-nb-externalcommmands.xml"/>
-        <file crc="1498776195" name="modules/ext/io.github.tristanjl.nb-externalcommmands/org-apache-commons/commons-lang3.jar"/>
-        <file crc="2909902523" name="modules/io-github-tristanjl-nb-externalcommmands.jar"/>
-    </module_version>
-</module>

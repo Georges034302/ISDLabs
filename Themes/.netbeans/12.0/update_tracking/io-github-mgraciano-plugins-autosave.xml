@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="io.github.mgraciano.plugins.autosave">
-    <module_version install_time="1611465098607" last="true" origin="NetBeans Plugin Portal" specification_version="1.3">
-        <file crc="2622398386" name="config/Modules/io-github-mgraciano-plugins-autosave.xml"/>
-        <file crc="2700896270" name="modules/io-github-mgraciano-plugins-autosave.jar"/>
-    </module_version>
-</module>

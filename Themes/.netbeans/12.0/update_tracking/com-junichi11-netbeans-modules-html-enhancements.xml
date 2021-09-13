@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="com.junichi11.netbeans.modules.html.enhancements">
-    <module_version install_time="1611465097218" last="true" origin="NetBeans Plugin Portal" specification_version="0.6.0">
-        <file crc="19157857" name="config/Modules/com-junichi11-netbeans-modules-html-enhancements.xml"/>
-        <file crc="2095432440" name="modules/com-junichi11-netbeans-modules-html-enhancements.jar"/>
-    </module_version>
-</module>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module codename="org.netbeans.modules.php.cake3">
-    <module_version install_time="1611465098589" last="true" origin="NetBeans Plugin Portal" specification_version="0.9.0">
-        <file crc="1664246981" name="config/Modules/org-netbeans-modules-php-cake3.xml"/>
-        <file crc="1664815851" name="modules/org-netbeans-modules-php-cake3.jar"/>
-    </module_version>
-</module>
