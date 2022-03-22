@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.util.Random"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,12 +14,9 @@
         <title>Home Page</title>
     </head>
     <body onload="startTime()" >
-        <h1>Hello World!</h1>
-        <% 
-            String name = "George";        
-        %>
-        <p>Tutor: <%= name%> </p>
-        <p>Random ID: <%= new Random().nextInt(999999) %></p>
+        <div id="bar">
+            <span id="links"><a href="login.jsp">Login</a>  |  <a href="register.jsp">Register</a></span>
+        </div>
         <div id="clock" class="footer">
             
         </div>

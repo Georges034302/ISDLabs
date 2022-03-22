@@ -49,6 +49,17 @@ a:hover, a:active{
     color: white;
 }
 
+.button:hover{
+    background-color: green;
+    color: white;
+}
+
+#form{
+    position:fixed;
+    left: 5%;
+    top:10%;
+}
+
 .footer{
     position: fixed;
     background-color: #134c5b;

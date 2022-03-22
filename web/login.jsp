@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 15/03/2022, 6:44:13 PM
+    Document   : login
+    Created on : 22/03/2022, 6:47:32 PM
     Author     : george
 --%>
 
@@ -11,11 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
         <script type="text/javascript" src="js/index.js"></script>
-        <title>Home Page</title>
+        <title>Login Page</title>
     </head>
     <body onload="startTime()" >
         <div id="bar">
-            <span id="links"><a href="login.jsp">Login</a>  |  <a href="register.jsp">Register</a></span>
+            <span id="links"><a href="index.jsp">Home</a>  |  <a href="register.jsp">Register</a></span>
         </div>
         <div id="clock" class="footer">
             
