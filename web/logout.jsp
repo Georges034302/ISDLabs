@@ -18,6 +18,9 @@
             <span id="links"><a href="index.jsp">Home</a> </span>
         </div>
         <h1>Thank you</h1>
+        <% 
+            session.invalidate();
+         %>
         <div id="clock" class="footer">
             
         </div>

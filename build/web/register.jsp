@@ -17,7 +17,7 @@
         <div id="bar">
             <span id="links"><a href="index.jsp">Home</a>  |  <a href="login.jsp">Login</a></span>
         </div>
-        <form id="form" method="POST" action="main.jsp">
+        <form id="form" method="POST" action="welcome.jsp">
                 <table>
                     <tr><td>Email: </td><td><input type="text" name="email"></td></tr>
                     <tr><td>Password:</td><td><input type="password" name="password"></td></tr>
@@ -27,9 +27,7 @@
                     <tr><td></td><td><input class="button" type="submit" value="Sign Up"></td></tr>
                 </table>
             </form>
-        <div id="clock" class="footer">
-            
-            
+        <div id="clock" class="footer">                        
         </div>
     </body>
 </html>

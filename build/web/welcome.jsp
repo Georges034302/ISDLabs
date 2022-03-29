@@ -19,21 +19,27 @@
             <span id="links"><a href="account.jsp">Account</a>  |  <a href="logout.jsp">Logout</a></span>
         </div>
         <% 
-            User user = (User)session.getAttribute("user");
+            String email = request.getParameter("email");
+            String name = request.getParameter("name");
+            String password = request.getParameter("password");
+            String phone = request.getParameter("phone");
+            String tos = request.getParameter("tos");
         %>
 
         <table id="form">
             
-                <tr><td>Email: </td><td><%= user.getEmail()%></td></tr>                    
-                <tr><td>Name: </td><td><%= user.getName()%></td></tr>
-                <tr><td>Phone: </td><td><%= user.getPhone()%></td></tr>              
+                <tr><td>Email: </td><td><%= email%></td></tr>                    
+                <tr><td>Name: </td><td><%= name%></td></tr>
+                <tr><td>Phone: </td><td><%= phone%></td></tr>  
+                <tr><td>Phone: </td><td>Click <a href="main.jsp">here</a> to go to main.</td></tr>  
         </table>
-        <%             
-            session.setAttribute("user", user);
+        <% 
+            User user = new User(email,name,password,phone);
+            session.setAttribute("user", user);            
         %>
+        
         <div id="clock" class="footer">
 
         </div>
     </body>
 </html>
-
