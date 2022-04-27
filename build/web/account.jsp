@@ -11,6 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/form.css">
         <script type="text/javascript" src="js/index.js"></script>
         <title>Account Page</title>
     </head>
@@ -22,18 +23,19 @@
             User user = (User)session.getAttribute("user");
             String updated= request.getParameter("updatted");
         %>
-        <form id="form" method="POST" action="account.jsp">
+        <div class="register-form">
+            <form method="POST" action="account.jsp">
                 <table>
-                    <tr><td>Email: </td><td><input type="text" name="email" value="<%= user.getID() %>" readonly="true"></td></tr>
-                    <tr><td>Email: </td><td><input type="text" name="email" value="<%= user.getEmail() %>"></td></tr>
-                    <tr><td>Password:</td><td><input type="password" name="password" value="${user.password}"></td></tr>
-                    <tr><td>Name: </td><td><input type="text" name="name" value="${user.name}"></td></tr>
-                    <tr><td>Phone: </td><td><input type="text" name="phone" value="${user.phone}"></td></tr>
-                    <tr><td>TOS: </td><td><input type="checkbox" name="tos"></td></tr>
+                    <tr><td>User ID: </td><td><input class="form-input" type="text" name="email" value="<%= user.getID() %>" readonly="true"></td></tr>
+                    <tr><td>Email: </td><td><input class="form-input"  type="text" name="email" value="<%= user.getEmail() %>"></td></tr>
+                    <tr><td>Password:</td><td><input class="form-input" type="password" name="password" value="${user.password}"></td></tr>
+                    <tr><td>Name: </td><td><input class="form-input" type="text" name="name" value="${user.name}"></td></tr>
+                    <tr><td>Phone: </td><td><input class="form-input" type="text" name="phone" value="${user.phone}"></td></tr>
                     <tr><td></td><td><input type="hidden" value="updatted" name="updatted"></td></tr>
-                    <tr><td></td><td><input class="button" type="submit" value="Edit"></td></tr>                    
+                    <tr><td></td><td><input class="login-button" type="submit" value="Edit"></td></tr>                    
                 </table>
-        </form>
+            </form>
+        </div>
         <% 
             if(updated != null && updated.equals("updatted")){
                     String email = request.getParameter("email");
@@ -49,9 +51,9 @@
                     
                     session.setAttribute("user", user);
             }
-            %>
+        %>
         <div id="clock" class="footer">
-            
+
         </div>
     </body>
 </html>

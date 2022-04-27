@@ -54,12 +54,6 @@ a:hover, a:active{
     color: white;
 }
 
-#form{
-    position:fixed;
-    left: 5%;
-    top:10%;
-}
-
 .footer{
     position: fixed;
     background-color: #134c5b;
@@ -74,8 +68,12 @@ a:hover, a:active{
 }
 
 .message{
-    color: #4CAF50;
+    color: #cccccc;
     font-weight: bold;
     font-size: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    padding: 10px;
+    float: bottom;
 }
 

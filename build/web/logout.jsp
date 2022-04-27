@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/form.css">
         <script type="text/javascript" src="js/index.js"></script>
         <title>Logout Page</title>
     </head>
@@ -17,7 +18,7 @@
         <div id="bar">
             <span id="links"><a href="index.jsp">Home</a> </span>
         </div>
-        <h1>Thank you</h1>
+        <div class="login-form"><p class="title">Thank you</p></div>
         <% 
             session.invalidate();
          %>

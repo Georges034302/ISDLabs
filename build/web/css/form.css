@@ -1,0 +1,116 @@
+.login-form {
+    background: rgba(0, 90, 120, 0.7);
+    border: 3px solid rgba(0, 90, 120, 0.9);
+    border-radius: 8px;
+    display: block;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+}
+
+.register-form {
+    background: rgba(0, 90, 120, 0.7);
+    border: 3px solid rgba(0, 90, 120, 0.9);
+    border-radius: 8px;
+    display: block;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    position: absolute;
+    width: 600px;
+    height: 380px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+}
+
+.title {    
+    color: #E67E22;
+    font-family: 'Nunito', sans-serif;
+    font-weight: boldl;
+    font-size: 2em;
+    padding: 20px 20px 20px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.form-input {
+    width: 300px;
+    height: 15px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.login-button {
+    width: 120px;
+    height: 35px;
+    margin-bottom: 10px;
+    float: right;
+    border: none;
+    border-radius: 4px;
+    background-size: 500% 100%;
+    background: rgba(6, 41, 61, 1);
+    box-shadow: inset 0 0 0 0 rgba(20, 196, 148, 1);
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+}
+
+.login-button:hover {
+    box-shadow: inset 0 40px 0 0 rgb(62, 142, 65);
+}
+
+
+table, th, td {
+    border-collapse: collapse;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+.remember-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: orange;
+    display: inline-block;
+}
+
+
+
+
