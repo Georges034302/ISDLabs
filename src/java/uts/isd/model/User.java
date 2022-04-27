@@ -8,17 +8,17 @@ import java.util.Random;
  */
 public class User implements Serializable{
     //Fields or properties
-    private int ID;
     private String email;
     private String name;
     private String password;
     private String phone;
-
+    private int ID;
+    
     public User() {
     }
 
-    public User(String email, String name, String password, String phone) {
-        ID = (new Random()).nextInt(999999);
+    public User(int ID, String email, String name, String password, String phone) {
+        this.ID = ID;
         this.email = email;
         this.name = name;
         this.password = password;
@@ -33,6 +33,7 @@ public class User implements Serializable{
         this.ID = ID;
     }
 
+    
     public String getEmail() {
         return email;
     }
