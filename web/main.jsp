@@ -32,9 +32,7 @@
             </table>
             
         </div>
-        <%             
-            session.setAttribute("user", user);
-        %>
+     
         <div id="clock" class="footer">
 
         </div>
